@@ -1,0 +1,187 @@
+42exit_code: 1
+42stderr: 'cat: echo: No such file or directory
+
+  '
+42stdout: '42sh
+
+  aide.py
+
+  ands
+
+  argparse
+
+  command1.yml
+
+  commands
+
+  glob
+
+  globbing
+
+  hll.py
+
+  install.sh
+
+  lists
+
+  multiples
+
+  ors
+
+  pipes
+
+  requirements.txt
+
+  subprocess
+
+  t1.py
+
+  tests.py
+
+  tests.py.backup
+
+  testsuite.py
+
+  tt_files
+
+  yaml
+
+  42sh
+
+  aide.py
+
+  ands
+
+  argparse
+
+  command1.yml
+
+  commands
+
+  glob
+
+  globbing
+
+  hll.py
+
+  install.sh
+
+  lists
+
+  multiples
+
+  ors
+
+  pipes
+
+  requirements.txt
+
+  subprocess
+
+  t1.py
+
+  tests.py
+
+  tests.py.backup
+
+  testsuite.py
+
+  tt_files
+
+  yaml
+
+  '
+exit_code: 1
+input: ls && ls && cat echo
+stderr: 'cat: echo: No such file or directory
+
+  '
+stdout: '42sh
+
+  aide.py
+
+  ands
+
+  argparse
+
+  command1.yml
+
+  commands
+
+  glob
+
+  globbing
+
+  hll.py
+
+  install.sh
+
+  lists
+
+  multiples
+
+  ors
+
+  pipes
+
+  requirements.txt
+
+  subprocess
+
+  t1.py
+
+  tests.py
+
+  tests.py.backup
+
+  testsuite.py
+
+  tt_files
+
+  yaml
+
+  42sh
+
+  aide.py
+
+  ands
+
+  argparse
+
+  command1.yml
+
+  commands
+
+  glob
+
+  globbing
+
+  hll.py
+
+  install.sh
+
+  lists
+
+  multiples
+
+  ors
+
+  pipes
+
+  requirements.txt
+
+  subprocess
+
+  t1.py
+
+  tests.py
+
+  tests.py.backup
+
+  testsuite.py
+
+  tt_files
+
+  yaml
+
+  '

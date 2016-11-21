@@ -1,0 +1,109 @@
+------------------- TODO -------------------
+
+                --- SRC/ ---
+
+main         :
+  - option :
+    -c             : DONE
+    --ast-print    : IN PROGRESS
+    --norc         : NOT DONE
+lexer   [benamo_l]     :
+  - separate space            : DONE
+  - separate operator         : DONE
+  - delete space              : DONE
+  - quote                     : IN PROGRESS
+  - double quote              : IN PROGRESS
+  - assignement $             : NOT DONE
+  - $() + `                   : NOT DONE
+(NOW)
+  - finish double quote     |
+  - fixe bug quote ['_*']   | : IN PROGRESS
+  - fixe bug ['*..*' < 1]   |
+
+
+parser  [ziwiak_p]     : IN PROGRESS
+  - ast tree                  : DONE
+  - print tree                : IN PROGRESS ++
+  - input                     : DONE
+  - list                      : IN PROGRESS
+  - and_or                    : IN PROGRESS
+  - pipeline                  : IN PROGRESS
+  - command                   : IN PROGRESS
+  - command shell             : IN PROGRESS
+  - command simple            : IN PROGRESS +
+  - funcdec                   : NOT DONE
+  - redirection               : NOT DONE
+  - prefix                    : IN PROGRESS
+  - element                   : IN PROGRESS
+  - compound_list             : IN PROGRESS
+  - rule_for                  : NOT DONE
+  - rule_while                : IN PROGRESS
+  - rule_until                : IN PROGRESS
+  - rule_case                 : NOT DONE
+  - else_clause               : NOT DONE
+  - case_clause               : NOT DONE
+  - case_item                 : NOT DONE
+  - do_group                  : IN PROGRESS
+  - rule_if                   : IN PROGRESS
+
+
+exec    [elghoz_d]     : IN PROGRESS
+  - fork and return a value                                : DONE
+  - create pipes for give an input to a forked process     : DONE
+  - create pipe for the output of a command                : DONE
+  - execute list of pipes                                  : DONE
+  - assignement thanks to a btree                          : IN PROGRESS
+  - recode builtins                                     : NOT DONE
+
+suit test [elghoz_d]
+  - timeout                                   : DONE
+  - success or KO                             : DONE
+  - time for each commands                    : DONE
+  - colors                                    : IN PROGRESS
+
+            -- TESTS/ (python) --
+
+format :
+    [categorie(s)]
+  - online = 1 test
+  - print error + exit code
+  - result / categorie
+
+  - global result
+
+
+                -- DOC/ --
+
+MAN PAGE (42sh.1)  :
+  - NAME
+  - SYNOSPSIS
+  - DESCRIPTION
+  - AUTHORS
+
+DOXYGEN  :
+
+    format : /**
+              * @[] ...text...
+              */
+
+    @[] :
+      @brief        to document
+
+      @struct       to document a C-struct.
+      @union        to document a union.
+      @enum         to document an enumeration type.
+      @fn           to document a function.
+      @var          to document a variable or typedef or enum value.
+      @def          to document a #define.
+      @typedef      to document a type definition.
+      @file         to document a file.
+      @namespace    to document a namespace.
+
+    to compile :
+      doxygen Doxyfile
+
+    to show :
+      chromium html/index.html
+
+    to configure :
+      configure Doxyfile

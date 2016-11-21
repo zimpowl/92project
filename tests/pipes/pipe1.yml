@@ -1,0 +1,9 @@
+42exit_code: 0
+42stderr: ''
+42stdout: '     22      22     193
+
+  '
+exit_code: 1
+input: ls | wc
+stderr: ''
+stdout: ''

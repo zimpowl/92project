@@ -1,0 +1,22 @@
+--------------------- README ------------------
+  Project 42sh
+
+To compile :
+  > mkdir build
+  > cd build
+  > cmake ..
+  > make
+--> binary 42sh created
+
+To run :
+  > ./42sh -c 'command'
+          OR
+  > ./42sh script.sh
+
+For more explanation read the MAN Page in 'doc/'
+
+Resume :
+  creation of an ast tree thanks to a struct tree. The size of the tree
+  represent the number of his sons. We fill recursively the tree thanks to 
+  the different rules of ast. Once the ast is filled, the ast_reader read the
+  tree recursively and call the differentes functions and builtins.

@@ -1,0 +1,9 @@
+42exit_code: 127
+42stderr: 'bash: lss: command not found
+
+  '
+42stdout: ''
+exit_code: 1
+input: lss && ls
+stderr: ''
+stdout: ''

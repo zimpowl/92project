@@ -1,0 +1,97 @@
+42exit_code: 0
+42stderr: 'bash: lss: command not found
+
+  '
+42stdout: '42sh
+
+  aide.py
+
+  ands
+
+  argparse
+
+  command1.yml
+
+  commands
+
+  glob
+
+  globbing
+
+  hll.py
+
+  install.sh
+
+  lists
+
+  multiples
+
+  ors
+
+  pipes
+
+  requirements.txt
+
+  subprocess
+
+  t1.py
+
+  tests.py
+
+  tests.py.backup
+
+  testsuite.py
+
+  tt_files
+
+  yaml
+
+  '
+exit_code: 0
+input: lss || ls
+stderr: ''
+stdout: '42sh
+
+  aide.py
+
+  ands
+
+  argparse
+
+  command1.yml
+
+  commands
+
+  glob
+
+  globbing
+
+  hll.py
+
+  install.sh
+
+  lists
+
+  multiples
+
+  ors
+
+  pipes
+
+  requirements.txt
+
+  subprocess
+
+  t1.py
+
+  tests.py
+
+  tests.py.backup
+
+  testsuite.py
+
+  tt_files
+
+  yaml
+
+  '
