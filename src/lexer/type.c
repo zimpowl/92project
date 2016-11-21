@@ -13,7 +13,8 @@ static int is_dquoted1(const char c)
 static int is_operator1(const char *s)
 {
   return s[0] == '&' || s[0] == ';' || s[0] == '<' || s[0] == '>' 
-         || s[0] == '(' || s[0] == ')' || s[0] == '#' || s[0] == '\n';
+         || s[0] == '(' || s[0] == ')' || s[0] == '#' || s[0] == '\n'
+         || s[0] == '!';
 }
 
 static int is_operator2(const char *s)
