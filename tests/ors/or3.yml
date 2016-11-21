@@ -8,17 +8,9 @@
 
   ands
 
-  argparse
-
   command1.yml
 
   commands
-
-  glob
-
-  globbing
-
-  hll.py
 
   install.sh
 
@@ -28,23 +20,21 @@
 
   ors
 
+  out
+
+  out1
+
+  out2
+
   pipes
 
   requirements.txt
-
-  subprocess
 
   t1.py
 
   tests.py
 
-  tests.py.backup
-
   testsuite.py
-
-  tt_files
-
-  yaml
 
   '
 exit_code: 0
@@ -56,17 +46,9 @@ stdout: '42sh
 
   ands
 
-  argparse
-
   command1.yml
 
   commands
-
-  glob
-
-  globbing
-
-  hll.py
 
   install.sh
 
@@ -76,22 +58,20 @@ stdout: '42sh
 
   ors
 
+  out
+
+  out1
+
+  out2
+
   pipes
 
   requirements.txt
-
-  subprocess
 
   t1.py
 
   tests.py
 
-  tests.py.backup
-
   testsuite.py
-
-  tt_files
-
-  yaml
 
   '

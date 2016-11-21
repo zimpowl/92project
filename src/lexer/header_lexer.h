@@ -69,7 +69,7 @@ char *append(char *s, char c);
  * @param i Index of char to delete
  * @brief delete character s[i] in s and realloc s in consequently
  */
-void my_delete(char *s, size_t i);
+char *my_delete(char *s, size_t i);
 /**
  * @fn void delete_space(char *s)
  * @param s String of reference

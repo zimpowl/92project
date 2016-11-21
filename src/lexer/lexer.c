@@ -1,6 +1,7 @@
 #include "header_lexer.h"
+#include <err.h>
 
-char *g_line = '\0';
+char *g_line = NULL;
 struct list_token *g_list = NULL;
 
 char *take_token()
@@ -35,10 +36,29 @@ void valid_token()
 void init_lexer(char *s)
 {
   size_t len = strlen(s);
+  if (!len)
+    return;
   g_line = malloc(len * sizeof (char));
+  if (!g_line)
+    return;
   s[len] = '\0';
   g_line = strcpy(g_line, s);
   g_line[len] = '\0';
   g_list = take_1_token(0);
-  g_list->next = take_1_token(g_list->i);
+  if (g_list)
+    g_list->next = take_1_token(g_list->i);
 }
+
+/*int main(int argc, char *argv[])
+{
+  if (argc != 2)
+    errx(1, "nb argument : 1");
+  init_lexer(argv[1]);
+  char *s = take_token();
+  while (s)
+  {
+    printf("%s\n", s);
+    valid_token();
+    s = take_token();
+  }
+}*/

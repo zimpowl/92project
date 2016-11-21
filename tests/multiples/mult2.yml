@@ -1,9 +1,8 @@
 42exit_code: 0
 42stderr: ''
-42stdout: "42sh\naide.py\nands\nargparse\ncommand1.yml\ncommands\nglob\nglobbing\n\
-  hll.py\ninstall.sh\nlists\nmultiples\nors\npipes\nrequirements.txt\nsubprocess\n\
-  t1.py\ntests.py\ntests.py.backup\ntestsuite.py\ntt_files\nyaml\n     22      22\
-  \     193\n"
+42stdout: "42sh\naide.py\nands\ncommand1.yml\ncommands\ninstall.sh\nlists\nmultiples\n\
+  ors\nout\nout1\nout2\npipes\nrequirements.txt\nt1.py\ntests.py\ntestsuite.py\n \
+  \    17      17     136\n"
 exit_code: 1
 input: ls && ls | wc
 stderr: ''
@@ -13,17 +12,9 @@ stdout: '42sh
 
   ands
 
-  argparse
-
   command1.yml
 
   commands
-
-  glob
-
-  globbing
-
-  hll.py
 
   install.sh
 
@@ -33,22 +24,20 @@ stdout: '42sh
 
   ors
 
+  out
+
+  out1
+
+  out2
+
   pipes
 
   requirements.txt
-
-  subprocess
 
   t1.py
 
   tests.py
 
-  tests.py.backup
-
   testsuite.py
-
-  tt_files
-
-  yaml
 
   '
