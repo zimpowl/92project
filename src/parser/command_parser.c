@@ -81,20 +81,19 @@ struct ntree *prefix_p(void)
 struct ntree *element_p(void)
 {
   char *token = take_token();
-  if (!token || (check_operators_p() == 0 && check_reserved_p() == 0))
+  if (!token || check_operators_p() == 1 || check_reserved_p() == 1)
     return redir_p();
 
   struct ntree *new = new_ntree(token, COMMAND);
   valid_token();
   token = take_token();
 
-  while (token && (check_operators_p() == 1 || check_reserved_p() == 1))
+  while (token && check_operators_p() == 0 && check_reserved_p() == 1)
   {
     struct ntree *args = new_ntree(token, WORD);
     new = add_ntree(new, args);
     valid_token();
     token = take_token();
   }
-
   return new;
 }
