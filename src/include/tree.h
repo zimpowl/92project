@@ -153,6 +153,9 @@ void create_dot(struct ntree *ntree);
  */
 int print_ast(FILE *fd, struct ntree *tree, int r);
 
+
+//initialize the binary tree with variables
+int init_env(void);
 /*struct btree
 {
   struct btree *left;
