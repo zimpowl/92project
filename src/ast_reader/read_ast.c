@@ -79,7 +79,47 @@ int pipeline_a(struct ntree *ntree)
 {
   struct ntree *new = ntree;
   int cnt = 0;
-  while (ntree->sons[0]->token == PIPELINE)
+
+  while (new && new->token == PIPELINE)
+  {
+    cnt ++;
+    new = new->sons[0];
+  }
+
+  new = ntree;
+  char **bigtab[cnt + 2];
+  for (int i = 0; i < cnt; i++)
+  {
+    struct ntree *newcom = new->sons[1];
+    bigtab[cnt - i] = malloc(sizeof (newcom->name));
+    bigtab[cnt - i][0] = newcom->name;
+    for (unsigned j = 0; j < newcom->size; j++)
+    {
+      bigtab[cnt - i][j + 1] = new->sons[j]->name;
+    }
+    bigtab[cnt - i][newcom->size + 1] = NULL;
+    new = new->sons[0];
+  }
+
+  bigtab[0] = malloc(sizeof (new->name));
+  bigtab[0][0] = new->name;
+  for (unsigned j = 0; j < new->size; j++)
+  {
+    bigtab[0][j + 1] = new->sons[j]->name;
+  }
+  bigtab[0][new->size + 1] = NULL;
+  bigtab[cnt + 1] = NULL;
+  
+  return exec_pipe(bigtab);
+}
+
+
+/*int pipeline_a(struct ntree *ntree)
+{
+  struct ntree *new = ntree;
+  int cnt = 0;
+
+  while (new->sons[0]->token == PIPELINE)
   {
     cnt ++;
     new = new->sons[0];
@@ -90,8 +130,8 @@ int pipeline_a(struct ntree *ntree)
   for (int i = 0; i < cnt; i ++)
   {
     char *tab[new->size + 2];
-    tab[0] = new->name;
     tab[0] = malloc(sizeof (new->name) * sizeof(char));
+    tab[0] = new->name;
     for (unsigned j = 0; j < new->size; j++)
     {
       tab[j + 1] = malloc(sizeof (new->sons[j]->name) * sizeof(char));
@@ -129,13 +169,13 @@ int pipeline_a(struct ntree *ntree)
   bigtab[2] = NULL;
   
   return exec_pipe(bigtab);
-}
+}*/
 
-void print_bigtab(char **tab[])
+/*void print_bigtab(char **tab[])
 {
   for (unsigned i = 0; tab[i] != NULL; i++)
   {
     for (unsigned j = 0; tab[i][j] != NULL; j++)
       printf("%s | ", tab[i][j]);
   }
-}
+}*/

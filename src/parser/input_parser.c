@@ -22,6 +22,8 @@ int skip_line(void)
 int check_operators_p(void)
 {
   char *token = take_token();
+  if (!token)
+    return 0;
   if (strcmp(token, "&") == 0 || strcmp(token, ";") == 0 
         || strcmp(token, "&&") == 0 || strcmp(token, "||") == 0
         || strcmp(token, "<") == 0 || strcmp(token, ">") == 0
@@ -31,7 +33,7 @@ int check_operators_p(void)
         || strcmp(token, ">|") == 0 || strcmp(token, "<<") == 0
         || strcmp(token, "(") == 0 || strcmp(token, ")") == 0
         || strcmp(token, "{") == 0 || strcmp(token, "}") == 0
-        || strcmp(token, ">>") == 0)
+        || strcmp(token, ">>") == 0 || strcmp(token, "|") == 0)
     return 1;
   else
     return 0;
