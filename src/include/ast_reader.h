@@ -51,7 +51,13 @@ int pipeline_a(struct ntree *ntree);
  * @param ntree
  * @return return the value.
  */
-int assign_a(struct ntree *ntree);
+int check_assign_a(struct ntree *ntree);
+/**
+ * @fn int check_condition_a(struct ntree *ntree);
+ * @param ntree
+ * @return return the value.
+ */
+int check_condition_a(struct ntree *ntree);
 
 //rules_ast.c
 /**

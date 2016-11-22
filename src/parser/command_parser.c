@@ -26,14 +26,14 @@ struct ntree *command_p(void)
 
 struct ntree *simple_command_p(void)
 {
-  struct ntree *new = prefix_p();
+  struct ntree *new = NULL;//prefix_p();
   struct ntree *new_sep = NULL;
 
   if (new)
   {
     do
     {
-      struct ntree *new_sep = prefix_p();
+      struct ntree *new_sep = NULL;//prefix_p();
       new = add_ntree(new, new_sep);
     } while (new_sep);
   }
@@ -49,7 +49,7 @@ struct ntree *simple_command_p(void)
   return new;
 }
 
-struct ntree *prefix_p(void)
+/*struct ntree *prefix_p(void)
 {
   char *token = take_token();
   char *token2 = take_next_token();
@@ -76,7 +76,7 @@ struct ntree *prefix_p(void)
     ntree = redir_p();
 
   return ntree;
-}
+}*/
 
 struct ntree *element_p(void)
 {

@@ -5,7 +5,8 @@
 
 
 //create a new btree using struct word
-struct btree *new_btree(struct word *word, struct btree *left, struct btree *right)
+struct btree *new_btree(struct word *word, 
+    struct btree *left, struct btree *right)
 {
   struct btree *res = malloc(sizeof (struct btree));
   if (!res)
@@ -226,10 +227,3 @@ void print_words(void)
   printf("printed after destroy\n");
   return 0;
 }*/
-
-
-
-
-
-
-
