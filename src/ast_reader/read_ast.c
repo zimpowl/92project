@@ -5,9 +5,10 @@
 
 int read_a(struct ntree *ntree)
 {
-  if (manage_a(ntree) == 0)
+  int res = manage_a(ntree);
+  if (res == 0)
     return 0;
-  return 1;
+  return res;
 }
 
 int manage_a(struct ntree *ntree)
@@ -30,14 +31,16 @@ int manage_a(struct ntree *ntree)
 
 int list_a(struct ntree *ntree)
 {
+  int i = 0;
+  int j = 0;
   if (strcmp(ntree->name, ";") == 0 || strcmp(ntree->name, "&") == 0)
   {
-    int i = manage_a(ntree->sons[0]);
-    int j = manage_a(ntree->sons[1]);
+    i = manage_a(ntree->sons[0]);
+    j = manage_a(ntree->sons[1]);
     if (i == 0 || j == 0)
       return 0;
   }
-  return 1;
+  return (i + j);
 }
 
 int and_or_a(struct ntree *ntree)

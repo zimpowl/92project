@@ -1,9 +1,9 @@
 42exit_code: 127
-42stderr: 'bash: lss: command not found
+42stderr: 'bash: lss : commande introuvable
 
   '
 42stdout: ''
-exit_code: 1
+exit_code: 127
 input: lss && ls
 stderr: ''
 stdout: ''

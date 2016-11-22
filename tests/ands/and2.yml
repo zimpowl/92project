@@ -1,5 +1,5 @@
 42exit_code: 1
-42stderr: 'cat: echo: No such file or directory
+42stderr: 'cat: echo: Aucun fichier ou dossier de ce type
 
   '
 42stdout: '42sh
@@ -8,17 +8,9 @@
 
   ands
 
-  argparse
-
   command1.yml
 
   commands
-
-  glob
-
-  globbing
-
-  hll.py
 
   install.sh
 
@@ -32,19 +24,11 @@
 
   requirements.txt
 
-  subprocess
-
   t1.py
 
   tests.py
 
-  tests.py.backup
-
   testsuite.py
-
-  tt_files
-
-  yaml
 
   42sh
 
@@ -52,17 +36,9 @@
 
   ands
 
-  argparse
-
   command1.yml
 
   commands
-
-  glob
-
-  globbing
-
-  hll.py
 
   install.sh
 
@@ -76,24 +52,16 @@
 
   requirements.txt
 
-  subprocess
-
   t1.py
 
   tests.py
 
-  tests.py.backup
-
   testsuite.py
-
-  tt_files
-
-  yaml
 
   '
 exit_code: 1
 input: ls && ls && cat echo
-stderr: 'cat: echo: No such file or directory
+stderr: 'cat: echo: Aucun fichier ou dossier de ce type
 
   '
 stdout: '42sh
@@ -102,17 +70,9 @@ stdout: '42sh
 
   ands
 
-  argparse
-
   command1.yml
 
   commands
-
-  glob
-
-  globbing
-
-  hll.py
 
   install.sh
 
@@ -126,19 +86,11 @@ stdout: '42sh
 
   requirements.txt
 
-  subprocess
-
   t1.py
 
   tests.py
 
-  tests.py.backup
-
   testsuite.py
-
-  tt_files
-
-  yaml
 
   42sh
 
@@ -146,17 +98,9 @@ stdout: '42sh
 
   ands
 
-  argparse
-
   command1.yml
 
   commands
-
-  glob
-
-  globbing
-
-  hll.py
 
   install.sh
 
@@ -170,18 +114,10 @@ stdout: '42sh
 
   requirements.txt
 
-  subprocess
-
   t1.py
 
   tests.py
 
-  tests.py.backup
-
   testsuite.py
-
-  tt_files
-
-  yaml
 
   '
