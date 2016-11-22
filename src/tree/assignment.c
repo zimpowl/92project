@@ -59,15 +59,6 @@ int add_word(enum token_parser *token, char *name, char *value)
     return 0;
   big_btree = add_word_rec(big_btree, word);
   return 1;
-
-  if (search_word(name))
-    return 0;
-  struct word *word = new_word(token, name, value);
-  if (!word)
-    return 0;
-  else
-    big_btree = add_word_rec(big_btree, word);
-  return 1;
 }
 
 //from delete function 
