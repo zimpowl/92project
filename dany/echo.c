@@ -60,6 +60,7 @@ void parse(char *arg)
     }
   }
 }
+
 void echo(char *args[])
 {
   struct opt *options = malloc(sizeof (struct opt));

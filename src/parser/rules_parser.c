@@ -4,7 +4,7 @@
 struct ntree *rule_if_p(void)
 {
  char *token = take_token();
-  if (token && strcmp(token, "if") != 0)
+  if (!token || strcmp(token, "if") != 0)
     return NULL;
   struct ntree *ntree = new_ntree(token, RESERVED_WORD);
   valid_token();

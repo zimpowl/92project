@@ -21,6 +21,8 @@ int rule_if_a(struct ntree *ntree)
   int res = manage_a(ntree->sons[0]);
   if (res == 0)
     return manage_a(ntree->sons[2]);
+  else if (strcmp(ntree->sons[3]->name, "elif") == 0)
+    res = manage_a(ntree->sons[3]);
   return res;
 }
 
