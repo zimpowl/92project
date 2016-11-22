@@ -22,11 +22,18 @@ int manage_a(struct ntree *ntree)
     i = and_or_a(ntree);
   else if (ntree->token == COMMAND)
     i = command_a(ntree);
+  else if (ntree->token == ASSIGNMENT_WORD)
+    i = assign_a(ntree);
   else if (ntree->token == RESERVED_WORD)
     i = rules_a(ntree);
   else if (ntree->token == PIPELINE)
     i = pipeline_a(ntree);
   return i;
+}
+
+int assign_a(struct ntree *ntree)
+{
+  return add_word(ntree->token, ntree->sons[0], ntree->sons[1]);
 }
 
 int list_a(struct ntree *ntree)
@@ -112,70 +119,3 @@ int pipeline_a(struct ntree *ntree)
   
   return exec_pipe(bigtab);
 }
-
-
-/*int pipeline_a(struct ntree *ntree)
-{
-  struct ntree *new = ntree;
-  int cnt = 0;
-
-  while (new->sons[0]->token == PIPELINE)
-  {
-    cnt ++;
-    new = new->sons[0];
-  }
-
-  new = ntree;
-  char **bigtab[cnt + 3];
-  for (int i = 0; i < cnt; i ++)
-  {
-    char *tab[new->size + 2];
-    tab[0] = malloc(sizeof (new->name) * sizeof(char));
-    tab[0] = new->name;
-    for (unsigned j = 0; j < new->size; j++)
-    {
-      tab[j + 1] = malloc(sizeof (new->sons[j]->name) * sizeof(char));
-      tab[j + 1] = new->sons[j]->name;
-    }
-    tab[new->size + 1] = NULL;
-    bigtab[i] = tab;
-    new = new->sons[0];
-  }
-  
-  struct ntree *newf = new->sons[0];
-  char *tab[newf->size + 2]; 
-  tab[0] = malloc(sizeof (newf->name) * sizeof(char));
-  tab[0] = newf->name;
-  for (unsigned l = 0; l < newf->size; l++)
-  {
-    tab[l + 1] = malloc(sizeof (newf->sons[l]->name) * sizeof (char));
-    tab[l + 1] = newf->sons[l]->name;
-  }
-  tab[newf->size + 1] = NULL;
-  
-  newf = new->sons[1];
-  char *tabb[newf->size + 2]; 
-  tabb[0] = malloc(sizeof (newf->name) * sizeof(char));
-  tabb[0] = newf->name;
-  for (unsigned l = 0; l < newf->size; l++)
-  {
-    tabb[l + 1] = malloc(sizeof (newf->sons[l]->name) * sizeof (char));
-    tabb[l + 1] = newf->sons[l]->name;
-  }
-  tabb[newf->size + 1] = NULL;
-  
-  bigtab[0] = tab;
-  bigtab[1] = tabb;
-  bigtab[2] = NULL;
-  
-  return exec_pipe(bigtab);
-}*/
-
-/*void print_bigtab(char **tab[])
-{
-  for (unsigned i = 0; tab[i] != NULL; i++)
-  {
-    for (unsigned j = 0; tab[i][j] != NULL; j++)
-      printf("%s | ", tab[i][j]);
-  }
-}*/
