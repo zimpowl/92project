@@ -1,15 +1,6 @@
 #include "../include/tree.h"
 
-struct btree
-{
-  struct btree *left;
-  struct btree *right;
-  char *name;
-};
-
-
-
-struct btree *search_btree(struct btree * tree, char *value)
+struct btree *search_btree(struct btree *tree, char *value)
 {
   if (!tree)
     return NULL;

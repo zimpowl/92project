@@ -3,17 +3,6 @@
 #include <stdlib.h>
 #include "../include/tree.h"
 
-///////////////delete me later
-//how to use all that ??
-//to add a word to the global big_btree you need to call add_word
-//to delete a word use delete_word(char *name)
-//search_word(char *name) eturn the struct word associated to the name 
-//or NULL if not found.
-// print_words(void) to print in the deep left hand format
-
-
-
-
 
 //create a new btree using struct word
 struct btree *new_btree(struct word *word, struct btree *left, struct btree *right)
@@ -59,7 +48,7 @@ struct btree *add_word_rec(struct btree *btree, struct word *word)
 //return 1 if error
 int add_word(enum token_parser *token, char *name, char *value)
 {
-  if (search_word(name);
+  if (search_word(name))
     return 0;
   struct word *word = new_word(token, name, value);
   if (!word)
@@ -69,7 +58,7 @@ int add_word(enum token_parser *token, char *name, char *value)
   return 1;
 }
 
-//from delete function
+//from delete function 
 struct btree *delete_max(struct btree *btree)
 {
   if (!btree->right)
@@ -186,17 +175,20 @@ void destroy_words(void)
 
 
 //allow to print each word found in the deep left hand way
-void print_btree(struct btree *tree)
+void print_words_rec(struct btree *tree)
 {
   if (!tree)
     return;
   printf("%s  %s \n", tree->word->name, tree->word->value);
-  print_btree(tree->left);
-  print_btree(tree->right);
+  print_words_rec(tree->left);
+  print_words_rec(tree->right);
 }
 
-
-int main(void)
+void print_words(void)
+{
+  print_words_rec(big_btree);
+}
+/*int main(void)
 {
   add_word(0, "f", "ok");
   add_word(0, "g", "ok");
@@ -233,7 +225,7 @@ int main(void)
   print_btree(big_btree);  //4
   printf("printed after destroy\n");
   return 0;
-}
+}*/
 
 
 
