@@ -88,7 +88,7 @@ struct ntree *element_p(void)
   valid_token();
   token = take_token();
 
-  while (token && check_operators_p() == 0 && check_reserved_p() == 1)
+  while (token && check_operators_p() == 0 && check_reserved_p() == 0)
   {
     struct ntree *args = new_ntree(token, WORD);
     new = add_ntree(new, args);
