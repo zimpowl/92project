@@ -47,12 +47,11 @@ int command_a(struct ntree *ntree);
  */
 int pipeline_a(struct ntree *ntree);
 /**
- * @fn void print_bigtab(char **tab[])
+ * @fn int assign_a(struct ntree *ntree)
  * @param ntree
  * @return return the value.
  */
-void print_bigtab(char **tab[]);
-
+int assign_a(struct ntree *ntree);
 
 //rules_ast.c
 /**

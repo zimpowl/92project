@@ -22,8 +22,8 @@ int manage_a(struct ntree *ntree)
     i = and_or_a(ntree);
   else if (ntree->token == COMMAND)
     i = command_a(ntree);
-  else if (ntree->token == ASSIGNMENT_WORD)
-    i = assign_a(ntree);
+  //else if (ntree->token == ASSIGNMENT_WORD)
+    //i = assign_a(ntree);
   else if (ntree->token == RESERVED_WORD)
     i = rules_a(ntree);
   else if (ntree->token == PIPELINE)
@@ -31,10 +31,10 @@ int manage_a(struct ntree *ntree)
   return i;
 }
 
-int assign_a(struct ntree *ntree)
+/*int assign_a(struct ntree *ntree)
 {
   return add_word(ntree->token, ntree->sons[0], ntree->sons[1]);
-}
+}*/
 
 int list_a(struct ntree *ntree)
 {

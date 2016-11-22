@@ -86,7 +86,8 @@ struct ntree *rule_fi_p(struct ntree *ntree)
 struct ntree *rule_whiletil_p(void)
 {
   char *token = take_token();
-  if (token && strcmp(token, "while") != 0 && strcmp(token, "until") != 0)
+  if (!token || 
+      (token && strcmp(token, "while") != 0 && strcmp(token, "until") != 0))
     return NULL;
 
   valid_token();

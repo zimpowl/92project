@@ -21,9 +21,9 @@ struct ntree *shell_command_p(void)
 
 struct ntree *shell_commandbis_p(void)
 {
-  struct ntree *new = NULL;
   char *token = take_token();
-  if (strcmp(token, "{") == 0 || strcmp(token, "(") == 0)
+  struct ntree *new = NULL;
+  if (token && (strcmp(token, "{") == 0 || strcmp(token, "(") == 0))
   {
     valid_token();
     new = compound_list_p();
