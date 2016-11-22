@@ -1,6 +1,6 @@
 #include "../include/executor.h"
 
-int exec(char *args[])
+int exec_builtin(char *args[])
 {
   int status;
   pid_t pid = fork();
@@ -20,3 +20,12 @@ int exec(char *args[])
     exit(WEXITSTATUS(status));
   exit(EXIT_FAILURE);
 }
+
+int exec(char *args[])
+{
+  if (!strcmp(args[0], "echo"))
+    return my_echo(args);
+  else
+    return exec_builtin(args);
+}
+
