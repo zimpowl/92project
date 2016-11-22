@@ -69,7 +69,7 @@ char *append(char *s, char c);
  * @param i Index of char to delete
  * @brief delete character s[i] in s and realloc s in consequently
  */
-char *my_delete(char *s, size_t i);
+char *my_delete(char *s, int i);
 /**
  * @fn void delete_space(char *s)
  * @param s String of reference
@@ -113,6 +113,9 @@ enum type_token take_type(char *s, char c, enum type_token type);
 
 
 /***************** check.c *****************/
+int search_dquoted(char *s, int start);
+
+int search_quoted(char *s, int start);
 /**
  * @fn void check_delete_end(struct list_token *list)
  * @param list current list of token
