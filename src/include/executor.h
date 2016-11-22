@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 
 /**
  * @fn int exec(char *args[])
@@ -23,4 +24,10 @@ int exec(char *args[]);
  */
 int exec_pipe(char **args[]);
 
+
+/**
+ * @fn int my_echo(ahcr *args[])
+ * @brief
+ */
+int my_echo(char *args[]);
 #endif

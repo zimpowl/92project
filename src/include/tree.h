@@ -30,7 +30,8 @@ enum token_parser
   IO_NUMBER,
   OPERATOR,
   RESERVED_WORD,
-  COMMAND
+  COMMAND,
+  TEST
 };
 
 /**

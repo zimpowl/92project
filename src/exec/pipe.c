@@ -3,7 +3,7 @@
 static int exec_pipe_cmd(char *args[], int income, int position)
 {
   int pipes[2];
-  pipe(pipes);	
+  pipe(pipes);
   pid_t pid = fork();
   if (pid == 0) 
   {

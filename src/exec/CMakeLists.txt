@@ -1,4 +1,5 @@
 set(SRC
+    echo.c
     executor.c
     pipe.c)
 
