@@ -12,8 +12,8 @@ int init_env(void)
   return 0;
 }
 
-int main(void)
+/*int main(void)
 {
   init_env();
   return 0;
-}  
+} */ 
