@@ -20,6 +20,12 @@
 
   ors
 
+  out
+
+  out1
+
+  out2
+
   pipes
 
   requirements.txt
@@ -51,6 +57,12 @@ stdout: '42sh
   multiples
 
   ors
+
+  out
+
+  out1
+
+  out2
 
   pipes
 

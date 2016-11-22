@@ -11,8 +11,8 @@ static size_t search_quoted(char *s)
 static void delete_quoted(struct list_token *list, size_t quote)
 {
     size_t len = strlen(list->token.s);
-    my_delete(list->token.s, len - quote);
-    my_delete(list->token.s, search_quoted(list->token.s));
+    list->token.s = my_delete(list->token.s, len - quote);
+    list->token.s = my_delete(list->token.s, search_quoted(list->token.s));
     len = strlen(list->token.s);
     list->token.s[len] = '\0';
 }

@@ -14,6 +14,7 @@ static int is_operator1(const char *s)
 {
   return s[0] == '&' || s[0] == ';' || s[0] == '<' || s[0] == '>' 
          || s[0] == '(' || s[0] == ')' || s[0] == '#' || s[0] == '\n'
+         || s[0] == '|' || s[0] == '$' || s[0] == '{' || s[0] == '}'
          || s[0] == '!';
 }
 
@@ -21,7 +22,8 @@ static int is_operator2(const char *s)
 {
   return !(strcmp(s, "&&") && strcmp(s, ";;") && strcmp(s, "<<") 
            && strcmp(s, ">>") && strcmp(s, "<&") && strcmp(s, ">&") 
-           && strcmp(s, "<>") && strcmp(s, ">|") && strcmp(s, "||"));
+           && strcmp(s, "<>") && strcmp(s, ">|") && strcmp(s, "||")
+           && strcmp(s, "$(") && strcmp(s, "${"));
 }
 
 static int is_operator3(const char *s)
@@ -44,7 +46,7 @@ int is_operator(char *tmp)
 
 int is_quoted(char *s, size_t len, enum type_token type)
 {
-  int res = is_quoted1(s[len - 2]);
+  int res = is_quoted1(s[len - 2]/*s[len - 2]*/);
   if ((res && type != WORD_QUOTED) || (type == WORD_QUOTED && !res))
     return 1; //WORD_QUOTED;
   else if (res && type == WORD_QUOTED)
