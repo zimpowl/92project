@@ -48,13 +48,17 @@ struct btree *add_word_rec(struct btree *btree, struct word *word)
 //return 1 if error
 int add_word(enum token_parser *token, char *name, char *value)
 {
-  if (search_word(name))
+  struct word *res = search_word(name);
+  if (res)
+  {
+    res->token = token;
+    res->value = value;
     return 0;
+  }
   struct word *word = new_word(token, name, value);
   if (!word)
     return 0;
-  else
-    big_btree = add_word_rec(big_btree, word);
+  big_btree = add_word_rec(big_btree, word);
   return 1;
 }
 

@@ -3,6 +3,35 @@
 #include "../include/tree.h"
 
 
+struct opt
+{
+  int a;
+  int e;
+};
+
+struct opt *update_options(char *word, struct opt *options)
+{
+  
+  for (unsigned i = 1; i < strlen(word); ++i)
+  {
+    if (word[i] == 'n')
+      options->n = 1;
+    else if (word[i] == 'e')
+    {
+      options->e = 1;
+      options->E = 0;
+    }
+    else if (word[i] == 'E')
+    {
+      options->e = 0;
+      options->E = 1;
+    }
+  }
+  return options;
+}
+
+
+
 int init_env(void)
 {
   add_word(0, "HOME", getenv("HOME")); 
