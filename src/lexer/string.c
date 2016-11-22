@@ -13,13 +13,13 @@ char *append(char *s, char c)
   return res;
 }
 
-char *my_delete(char *s, size_t n)
+char *my_delete(char *s, int n)
 {
-  size_t len = strlen(s);
+  int len = strlen(s);
   char *res = malloc((len - 1) * sizeof (char));
   if (!res)
     return NULL;
-  size_t i = 0;
+  int i = 0;
   for (i = 0; i < n; i++)
     res[i] = s[i];
   for (; i < len - 1; i++)
