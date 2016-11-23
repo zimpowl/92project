@@ -113,6 +113,8 @@ enum type_token take_type(char *s, char c, enum type_token type);
 
 
 /***************** check.c *****************/
+char *my_insert(char *s1, char *s2, int n);
+
 int search_dquoted(char *s, int start);
 
 int search_quoted(char *s, int start);
