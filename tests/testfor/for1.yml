@@ -1,0 +1,43 @@
+42exit_code: 0
+42stderr: ''
+42stdout: '1
+
+  1
+
+  1
+
+  2
+
+  1
+
+  3
+
+  2
+
+  1
+
+  2
+
+  2
+
+  2
+
+  3
+
+  3
+
+  1
+
+  3
+
+  2
+
+  3
+
+  3
+
+  '
+exit_code: 127
+input: for i in 1 2 3; do for j in 1 2 3; do echo $i; echo $j; done; done
+stderr: ''
+stdout: ''

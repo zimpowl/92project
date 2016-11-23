@@ -65,6 +65,7 @@ struct ntree *do_group_p(void)
   if (!token || strcmp(token, "done") != 0)
     return NULL;
 
+  valid_token();
   new = new_ntree(token, GROUP);
   ntree = add_ntree(ntree, new);
 
