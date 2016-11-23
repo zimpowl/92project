@@ -8,6 +8,4 @@ input: echo $a
 stderr: ''
 stdout: '$a
 
-  $a
-
   '

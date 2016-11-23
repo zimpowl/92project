@@ -25,7 +25,10 @@ struct token init_token(size_t i)
   {
     tok.s = malloc(sizeof (char));
     if (tok.s)
+    {
       tok.s[0] = g_line[i];
+      tok.s[1] = '\0';
+    }
   }
   else
     tok.s = NULL;
