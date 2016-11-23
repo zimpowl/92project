@@ -140,8 +140,7 @@ char *var_assigned_a(char *name)
   if (strstr(name, "$") == NULL)
     return name;
 
-  char *n = strtok(name, "\0");
-  printf("%s\n", n);
+  char *n = strtok(name, "$");
   struct word *w = search_word(n);
   if (!w)
     return name;

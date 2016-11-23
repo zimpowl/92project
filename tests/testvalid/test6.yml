@@ -1,1 +1,31 @@
-input: echo toto; echo tata; echo titi; echo jojo; echo jiji; echo jaja 
+42exit_code: 0
+42stderr: ''
+42stdout: 'toto
+
+  tata
+
+  titi
+
+  jojo
+
+  jiji
+
+  jaja
+
+  '
+exit_code: 0
+input: echo toto; echo tata; echo titi; echo jojo; echo jiji; echo jaja
+stderr: ''
+stdout: 'toto
+
+  tata
+
+  titi
+
+  jojo
+
+  jiji
+
+  jaja
+
+  '
