@@ -137,13 +137,16 @@ int check_condition_a(struct ntree *ntree)
 
 char *var_assigned_a(char *name)
 {
-  char *n = strtok(name, "$");
+  if (strstr(name, "$") == NULL)
+    return name;
+
+  char *n = strtok(name, "\0");
   printf("%s\n", n);
   struct word *w = search_word(n);
   if (!w)
     return name;
-  else
-    return w->value;
+
+  return w->value;
 }
 
 int command_a(struct ntree *ntree)
@@ -159,13 +162,8 @@ int command_a(struct ntree *ntree)
   char *command[ntree->size + 2];
   command[0] = ntree->name;
   for (unsigned i = 0; i < ntree->size; i++)
-  {
-    char *name = var_assigned_a(ntree->sons[i]->name);
-    if (!name)
-      command[i+1] = ntree->sons[i]->name;
-    else
-      command[i+1] = name;      
-  }
+    command[i+1] = var_assigned_a(ntree->sons[i]->name);
+  
   command[ntree->size + 1] = NULL;
   return exec(command);
 }
