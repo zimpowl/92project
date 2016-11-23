@@ -1,13 +1,13 @@
 42exit_code: 0
 42stderr: ''
-42stdout: 'ok
+42stdout: '
 
   '
 exit_code: 0
 input: echo $a
 stderr: ''
-stdout: 'ok
+stdout: '$a
 
-  ok
+  $a
 
   '

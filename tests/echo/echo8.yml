@@ -1,0 +1,9 @@
+42exit_code: 0
+42stderr: ''
+42stdout: "bla bla \e\\n\n"
+exit_code: 0
+input: echo -e "bla bla \e\\\n"
+stderr: ''
+stdout: '"bla bla \e\\\n"1
+
+  '
