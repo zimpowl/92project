@@ -1,5 +1,12 @@
 #include <../include/executor.h>
 #include <../lexer/header_lexer.h>
+//#include <../include/tree.h>
+
+struct string_i
+{
+  char *s;
+  int i;
+};
 
 static void echo_e(int argc, char *args[])
 {
@@ -10,7 +17,7 @@ static void echo_e(int argc, char *args[])
   }
 }
 
-static char *in_dquoted(char *s, int end, int begin)
+/*static struct string_i *in_dquoted(char *s, int end, int begin)
 {
   for (int i = begin + 1; i < end; i++)
   {
@@ -25,10 +32,15 @@ static char *in_dquoted(char *s, int end, int begin)
   return s;
 }
 
+static char *dolar(char *s, int n)
+{
+  
+}
+*/
 static void echo_not_e(int argc, char *args[])
 {
   char *s = args[argc + 1];
-  int len = strlen(s);
+  /*int len = strlen(s);
   
   int dquoted = search_dquoted(s, 1);
   if (dquoted > 0 && dquoted < len)
@@ -40,11 +52,18 @@ static void echo_not_e(int argc, char *args[])
     s = my_delete(s, quoted);
     s = my_delete(s, search_quoted(s, 0));
     s[len - 2] = '\0';
-  }
+  }*/
+  /*struct string_i S;
+  S.i = 0;
+  S.s = s;
+  S = echo_one(S);*/
   printf("%s", s);
   for (int i = argc + 2; args[i]; i++)
   {
-    printf(" %s", args[i]);
+   /* S.i = 0;
+    S.s = args[i];
+    S = echo_one(S);*/
+    printf(" %s", s);
   }
 }
 
