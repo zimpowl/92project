@@ -14,16 +14,14 @@ static int is_operator1(const char *s)
 {
   return s[0] == '&' || s[0] == ';' || s[0] == '<' || s[0] == '>' 
          || s[0] == '(' || s[0] == ')' || s[0] == '#' || s[0] == '\n'
-         || s[0] == '|' || s[0] == '$' || s[0] == '{' || s[0] == '}'
-         || s[0] == '!';
+         || s[0] == '|' || s[0] == '!' || s[0] == '{' || s[0] == '}';
 }
 
 static int is_operator2(const char *s)
 {
   return !(strcmp(s, "&&") && strcmp(s, ";;") && strcmp(s, "<<") 
            && strcmp(s, ">>") && strcmp(s, "<&") && strcmp(s, ">&") 
-           && strcmp(s, "<>") && strcmp(s, ">|") && strcmp(s, "||")
-           && strcmp(s, "$(") && strcmp(s, "${"));
+           && strcmp(s, "<>") && strcmp(s, ">|") && strcmp(s, "||"));
 }
 
 static int is_operator3(const char *s)
