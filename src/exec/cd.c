@@ -4,51 +4,66 @@
 #include <string.h>
 #include "../include/tree.h"
 
+int setenv(const char *name, const char *value, int overwrite);
+
+
 int cd(char **args)
 {
-  char *ptr = args[1];
-  struct word *tmp = search_word("PWD");
+  int index = 0;
+  char *ptr = args[0];
   while (ptr)
   {
-    if (ptr[0] == '-')
+
+    if (strcmp(ptr, "cd") == 0)
+    {
+
+    }
+    else if (ptr[0] == '-')
     {
       //options
     }
     else
     {
       add_word(0, "OLDPWD", search_word("PWD")->value);
-      chdir(ptr);
-      setenv("PWD", ptr, 1);
-      add_word(0, "PWD", 
-      
-    }  
+      char *tmp = ptr;
+      if (ptr[0] == '/')
+      {
+        add_word(0, "PWD", tmp);
+      }
+      else
+      {
+        char *value = malloc(sizeof (search_word("PWD")->value) * sizeof(char));
+	value = search_word("PWD")->value;
+
+        tmp = malloc(sizeof (ptr) + sizeof (value) + 1);
+        
+	//char slash[2] = {'/', '\0'};
+	
+	//tmp = strcat(value, slash);
+	//tmp = strcat(tmp, ptr);
+                
+        chdir(tmp);
+        setenv("PWD", tmp, 1);
+	printf("%s\n", tmp);
+        return 1;
+      }
+    }
+    index++;
+    ptr = args[index];
   }
   chdir(search_word("HOME")->value);
-  putenv("PWD=");
-  
   print_words();
   
   return 0;
 }
 
-int setenv(const char *name, const char *value, int overwrite);
 int main(void)
 {
   init_env();
-  chdir(".");
-  setenv("PWD", search_word("PWD")->value, 1);
-  printf("%s\n", getenv("PWD"));
-  DIR           *d;
-  struct dirent *dir;
-  d = opendir(".");
-  if (d)
-  {
-    while ((dir = readdir(d)) != NULL)
-    {
-      printf("%s\n", dir->d_name);
-    }
-
-    closedir(d);
-  }
+  char *argv[3];
+  argv[0] = "cd";
+  argv[1] = "hey";
+  argv[2] = NULL;
+  cd(argv);
   return 0;
 }
