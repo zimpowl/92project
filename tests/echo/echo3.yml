@@ -4,7 +4,7 @@
 
   '
 exit_code: 0
-input: echo ok
+input: echo $a
 stderr: ''
 stdout: 'ok
 

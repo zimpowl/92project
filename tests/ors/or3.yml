@@ -10,6 +10,8 @@
 
   commands
 
+  echo
+
   if
 
   install.sh
@@ -24,9 +26,13 @@
 
   t1.py
 
+  testnonvalid
+
   tests.py
 
   testsuite.py
+
+  testvalid
 
   while
 
@@ -42,6 +48,8 @@ stdout: '42sh
 
   commands
 
+  echo
+
   if
 
   install.sh
@@ -56,9 +64,13 @@ stdout: '42sh
 
   t1.py
 
+  testnonvalid
+
   tests.py
 
   testsuite.py
+
+  testvalid
 
   while
 

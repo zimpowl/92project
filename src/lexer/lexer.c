@@ -48,8 +48,8 @@ void init_lexer(char *s)
   if (g_list)
     g_list->next = take_1_token(g_list->i);
 }
-
-/*int main(int argc, char *argv[])
+/*
+int main(int argc, char *argv[])
 {
   if (argc != 2)
     errx(1, "nb argument : 1");
