@@ -80,13 +80,13 @@ int check_assign_a(struct ntree *ntree)
   {
     if (str[i] ==  '=' && str[i+1])
     { 
-      if ( str[i+1] == '=')
+      if (str[i+1] == '=')
         return -1;
       else
         break;
     }
   }
-  if (i == strlen(str - 1))
+  if (i >= strlen(str))
     return -1;
   char *name = strtok(str, "=");
   char *value = strtok(NULL, "\0");
@@ -112,28 +112,38 @@ int check_condition_a(struct ntree *ntree)
       if (!w)
         return -1;
 
-      printf("%s\n", w->value);
       if (strcmp(w->value, value) == 0)
         return 0;
       return 1;
     }
     
-    else if (str[i] == '!' && str[i+1] 
+    /*else if (str[i] == '!' && str[i+1] 
         && str[i+1] == '=' && str[i+2] 
           && str[i+2] != '=')
     {
       char *name = strtok(str, "!=");
       char *value = strtok(NULL, "=");
       struct word *w = search_word(name);
-      printf("%s %s\n", value, w->value);
+      printf("%s\n", value);
       if (!w)
         return -1;
       if (strcmp(w->value, value) == 0)
         return 1;
       return 0;
-    }
+    }*/
   }
   return -1;
+}
+
+char *var_assigned_a(char *name)
+{
+  char *n = strtok(name, "$");
+  printf("%s\n", n);
+  struct word *w = search_word(n);
+  if (!w)
+    return name;
+  else
+    return w->value;
 }
 
 int command_a(struct ntree *ntree)
@@ -149,15 +159,37 @@ int command_a(struct ntree *ntree)
   char *command[ntree->size + 2];
   command[0] = ntree->name;
   for (unsigned i = 0; i < ntree->size; i++)
-    command[i+1] = ntree->sons[i]->name;
+  {
+    char *name = var_assigned_a(ntree->sons[i]->name);
+    if (!name)
+      command[i+1] = ntree->sons[i]->name;
+    else
+      command[i+1] = name;      
+  }
   command[ntree->size + 1] = NULL;
   return exec(command);
+}
+
+int pipeline_nor_a(struct ntree *ntree)
+{
+  if (strcmp(ntree->name, "!") != 0)
+    return -1;
+
+  int res = manage_a(ntree->sons[0]);
+  if (res == 0)
+    return 1;
+  else
+    return 0;
 }
 
 int pipeline_a(struct ntree *ntree)
 {
   struct ntree *new = ntree;
   int cnt = 0;
+
+  int check_nor = pipeline_nor_a(ntree);
+  if (check_nor != -1)
+    return check_nor;
 
   while (new && new->token == PIPELINE)
   {

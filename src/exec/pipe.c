@@ -44,3 +44,17 @@ int exec_pipe(char **args[])
     waiter(i + 1);
   return 0;
 }
+
+/*int main(void)
+{
+  char **argv[4];
+  char *arg0[] = { "cat", "A", NULL };
+  char *arg1[] = { "ls", NULL };
+  char *arg2[] = { "wc", NULL };
+  argv[0] = arg0;
+  argv[1] = arg1;
+  argv[2] = arg2;
+  argv[3] = NULL;
+  exec_pipe(argv);
+  return 0;
+}*/

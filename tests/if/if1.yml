@@ -28,9 +28,11 @@
 
   while
 
+  ok
+
   '
 exit_code: 0
-input: ls || ls || cat echo
+input: if ls; then echo ok; fi
 stderr: ''
 stdout: '42sh
 
@@ -59,5 +61,7 @@ stdout: '42sh
   testsuite.py
 
   while
+
+  ok
 
   '

@@ -23,15 +23,25 @@ struct ntree *shell_commandbis_p(void)
 {
   char *token = take_token();
   struct ntree *new = NULL;
-  if (token && (strcmp(token, "{") == 0 || strcmp(token, "(") == 0))
+  if (token && strcmp(token, "{") == 0)
   {
     valid_token();
     new = compound_list_p();
     if (!new)
       return NULL;
-
     token = take_token();
-    if (strcmp(token, "}") != 0 && strcmp(token, ")") != 0)
+    if (token && strcmp(token, "}") != 0)
+      return NULL;
+    valid_token();
+  }
+  else if (token && strcmp(token, "(") == 0)
+  {
+    valid_token();
+    new = compound_list_p();
+    if (!new)
+      return NULL;
+    token = take_token();
+    if (token && strcmp(token, ")") != 0)
       return NULL;
     valid_token();
   }

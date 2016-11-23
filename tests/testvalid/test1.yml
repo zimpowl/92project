@@ -1,0 +1,1 @@
+input: echo true || echo false && ! echo paul && echo ziwia

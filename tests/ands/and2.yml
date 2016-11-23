@@ -1,30 +1,20 @@
-42exit_code: 1
-42stderr: 'cat: echo: Aucun fichier ou dossier de ce type
-
-  '
+42exit_code: 0
+42stderr: ''
 42stdout: '42sh
 
   aide.py
 
   ands
 
-  command1.yml
-
   commands
 
-  install.sh
+  if
 
-  lists
+  install.sh
 
   multiples
 
   ors
-
-  out
-
-  out1
-
-  out2
 
   pipes
 
@@ -35,6 +25,10 @@
   tests.py
 
   testsuite.py
+
+  while
+
+  ok
 
   42sh
 
@@ -42,23 +36,15 @@
 
   ands
 
-  command1.yml
-
   commands
 
-  install.sh
+  if
 
-  lists
+  install.sh
 
   multiples
 
   ors
-
-  out
-
-  out1
-
-  out2
 
   pipes
 
@@ -70,35 +56,27 @@
 
   testsuite.py
 
-  '
-exit_code: 1
-input: ls && ls && cat echo
-stderr: 'cat: echo: Aucun fichier ou dossier de ce type
+  while
 
   '
+exit_code: 0
+input: ls && echo ok && ls
+stderr: ''
 stdout: '42sh
 
   aide.py
 
   ands
 
-  command1.yml
-
   commands
 
-  install.sh
+  if
 
-  lists
+  install.sh
 
   multiples
 
   ors
-
-  out
-
-  out1
-
-  out2
 
   pipes
 
@@ -109,6 +87,8 @@ stdout: '42sh
   tests.py
 
   testsuite.py
+
+  while
 
   42sh
 
@@ -116,23 +96,15 @@ stdout: '42sh
 
   ands
 
-  command1.yml
-
   commands
 
-  install.sh
+  if
 
-  lists
+  install.sh
 
   multiples
 
   ors
-
-  out
-
-  out1
-
-  out2
 
   pipes
 
@@ -143,5 +115,9 @@ stdout: '42sh
   tests.py
 
   testsuite.py
+
+  while
+
+  ok
 
   '

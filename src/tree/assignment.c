@@ -53,7 +53,7 @@ int add_word(enum token_parser *token, char *name, char *value)
   {
     res->token = token;
     res->value = value;
-    return 0;
+    return 1;
   }
   struct word *word = new_word(token, name, value);
   if (!word)

@@ -13,6 +13,8 @@ int rules_a(struct ntree *ntree)
     return rule_while_a(ntree);
   if (strcmp(ntree->name, "until") == 0)
     return rule_until_a(ntree);
+  if (strcmp(ntree->name, "for") == 0)
+    return rule_for_a(ntree);
   return 1;
 }
 
@@ -44,6 +46,17 @@ int rule_until_a(struct ntree *ntree)
   {
     if (do_group_a(ntree->sons[1]) != 0)
         return 1;
+  }
+  return 0;
+}
+
+int rule_for_a(struct ntree *ntree)
+{
+  int i = 2;
+  for (; ntree->sons[i]->token != LIST; i++)
+  {
+    if (add_word(0, ntree->sons[0]->name, ntree->sons[i]->name))
+      do_group_a(ntree->sons[ntree->size-1]);
   }
   return 0;
 }

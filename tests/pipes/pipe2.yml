@@ -1,0 +1,11 @@
+42exit_code: 0
+42stderr: ''
+42stdout: '     14      14     112
+
+  '
+exit_code: 0
+input: ls | ls |wc
+stderr: ''
+stdout: '     14      14     112
+
+  '

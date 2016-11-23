@@ -103,6 +103,8 @@ if parsed.list:
   print("ors")
   print("pipes")
   print("multiples")
+  print("if")
+  print("while")
   exit(0)
 
 if parsed.timeout:
@@ -123,4 +125,6 @@ else:
   start_test("ors")
   start_test("pipes")
   start_test("multiples")
+  start_test("if")
+  start_test("while")
   exit(0)

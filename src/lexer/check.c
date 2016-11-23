@@ -5,14 +5,14 @@ int search_dquoted(char *s, int start)
   int i = strlen(s) - 1;
   if (!start)
   {
-    for(; i >= 0 && s[i] != '\"' && s[i - 1] == '\\'; i--)
+    for(; s[i] != '\"' && s[i - 1] == '\\' && i >= 0; i--)
       continue;
     //i++;
   }
   else
   {
     i = 0;
-    for(; s[i] != '\0' && s[i] != '\"' && s[i - 1] == '\\'; i++)
+    for(; s[i] != '\"' && s[i - 1] == '\\' && s[i] != '\0'; i++)
       continue;
     //i--;
   }
@@ -27,14 +27,14 @@ int search_quoted(char *s, int start)
   {
     for(; s[i] != '\'' && i >= 0; i--)
       continue;
-    //i++;
+    //i--;
   }
   else
   {
     i = 0;
     for(; s[i] != '\'' && s[i] != '\0'; i++)
       continue;
-    //i--;
+    //i++;
   }
   
   return i;

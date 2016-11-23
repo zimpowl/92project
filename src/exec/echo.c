@@ -22,7 +22,6 @@ static char *in_dquoted(char *s, int end, int begin)
   }
   s = my_delete(s, begin);
   s = my_delete(s, end - 1);
- // s[len - 2] = '\0';
   return s;
 }
 
@@ -32,23 +31,16 @@ static void echo_not_e(int argc, char *args[])
   int len = strlen(s);
   
   int dquoted = search_dquoted(s, 1);
-  if (dquoted >= 0 && dquoted < len)
+  if (dquoted > 0 && dquoted < len)
     s = in_dquoted(s, search_dquoted(s, 0), dquoted);
   
-/*  int quoted = search_quoted(s, 1);
-  int dquoted = search_dquoted(s, 1);
-  if (quoted >= 0 && quoted < len)
+  int quoted = search_quoted(s, 1);
+  if (quoted > 0 && quoted < len)
   {
     s = my_delete(s, quoted);
     s = my_delete(s, search_quoted(s, 0));
     s[len - 2] = '\0';
   }
-  if (dquoted >= 0 && dquoted < len)
-  {
-    s = my_delete(s, dquoted);
-    s = my_delete(s, search_dquoted(s, 0));
-    s[len - 2] = '\0';
-  }*/
   printf("%s", s);
   for (int i = argc + 2; args[i]; i++)
   {

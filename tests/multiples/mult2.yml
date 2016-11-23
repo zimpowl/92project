@@ -1,0 +1,9 @@
+42exit_code: 0
+42stderr: ''
+42stdout: "42sh\naide.py\nands\ncommands\nif\ninstall.sh\nmultiples\nors\npipes\n\
+  requirements.txt\nt1.py\ntests.py\ntestsuite.py\nwhile\n     14      14     112\n"
+exit_code: 0
+input: ls && ls | wc
+stderr: ''
+stdout: "42sh\naide.py\nands\ncommands\nif\ninstall.sh\nmultiples\nors\npipes\nrequirements.txt\n\
+  t1.py\ntests.py\ntestsuite.py\nwhile\n     14      14     112\n"

@@ -41,11 +41,23 @@ int and_or_a(struct ntree *ntree);
  */
 int command_a(struct ntree *ntree);
 /**
+ * @fn int pipeline_nor_a(struct ntree *ntree)
+ * @param ntree
+ * @return return the value.
+ */
+int pipeline_nor_a(struct ntree *ntree);
+/**
  * @fn int pipeline_a(struct ntree *ntree)
  * @param ntree
  * @return return the value.
  */
 int pipeline_a(struct ntree *ntree);
+/**
+ * @fn char *var_assigned_a(char *name)
+ * @param ntree
+ * @return return the value.
+ */
+char *var_assigned_a(char *name);
 /**
  * @fn int assign_a(struct ntree *ntree)
  * @param ntree
@@ -53,7 +65,7 @@ int pipeline_a(struct ntree *ntree);
  */
 int check_assign_a(struct ntree *ntree);
 /**
- * @fn int check_condition_a(struct ntree *ntree);
+ * @fn int check_condition_a(struct ntree *ntree)
  * @param ntree
  * @return return the value.
  */
@@ -80,6 +92,12 @@ int rule_if_a(struct ntree *ntree);
 int rule_while_a(struct ntree *ntree);
 /**
  * @fn int rule_until_a(struct ntree *ntree)
+ * @param ntree
+ * @return return the value.
+ */
+int rule_for_a(struct ntree *ntree);
+/**
+ * @fn int rule_until_a(struct ntree *ntree);
  * @param ntree
  * @return return the value.
  */

@@ -6,23 +6,15 @@
 
   ands
 
-  command1.yml
-
   commands
 
-  install.sh
+  if
 
-  lists
+  install.sh
 
   multiples
 
   ors
-
-  out
-
-  out1
-
-  out2
 
   pipes
 
@@ -33,6 +25,8 @@
   tests.py
 
   testsuite.py
+
+  while
 
   42sh
 
@@ -40,23 +34,15 @@
 
   ands
 
-  command1.yml
-
   commands
 
-  install.sh
+  if
 
-  lists
+  install.sh
 
   multiples
 
   ors
-
-  out
-
-  out1
-
-  out2
 
   pipes
 
@@ -68,9 +54,13 @@
 
   testsuite.py
 
+  while
+
+  ok
+
   '
 exit_code: 0
-input: ls & ls
+input: if ls && ls; then echo ok; fi
 stderr: ''
 stdout: '42sh
 
@@ -78,23 +68,15 @@ stdout: '42sh
 
   ands
 
-  command1.yml
-
   commands
 
-  install.sh
+  if
 
-  lists
+  install.sh
 
   multiples
 
   ors
-
-  out
-
-  out1
-
-  out2
 
   pipes
 
@@ -105,6 +87,8 @@ stdout: '42sh
   tests.py
 
   testsuite.py
+
+  while
 
   42sh
 
@@ -112,23 +96,15 @@ stdout: '42sh
 
   ands
 
-  command1.yml
-
   commands
 
-  install.sh
+  if
 
-  lists
+  install.sh
 
   multiples
 
   ors
-
-  out
-
-  out1
-
-  out2
 
   pipes
 
@@ -139,5 +115,9 @@ stdout: '42sh
   tests.py
 
   testsuite.py
+
+  while
+
+  ok
 
   '

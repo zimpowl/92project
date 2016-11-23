@@ -16,7 +16,23 @@ To run :
 For more explanation read the MAN Page in 'doc/'
 
 Resume :
-  creation of an ast tree thanks to a struct tree. The size of the tree
+[V.0.5] 
+  -creation of an ast tree thanks to a struct tree. The size of the tree
   represent the number of his sons. We fill recursively the tree thanks to 
-  the different rules of ast. Once the ast is filled, the ast_reader read the
+  the different rules of the grammar. 
+  Once the ast is filled, the ast_reader read the
   tree recursively and call the differentes functions and builtins.
+  
+[V.0.8]
+  -You can add some assignment word filled in a btree. When the word is 
+  assigned, you can interpret it in a different condition such as 
+  a while, a for or an until function. The beggining of some builtins are done
+  like echo or cd. The test suits has been improved to have the compare the
+  exact value between our 42shell with the bash posix. A new dot file has been 
+  created to show us the grammar and the construction of our ast tree.
+
+[V.0.9]
+  -See you soon
+
+[V.1.0]
+  -See you soon

@@ -1,0 +1,1 @@
+input: (echo true || echo polo && echo false) && (! echo dany && echo lea || (echo 42sh && echo The_project) 

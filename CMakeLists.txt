@@ -18,10 +18,11 @@ set(SRC
 
 add_custom_target(ast
   COMMAND dot mondot.dot -Tpng -o hello.png
-  COMMAND feh hello.png)
+  COMMAND eog hello.png)
 
 add_custom_target(check 
-    COMMAND ./tests.py ${CMAKE_BINARY_DIR}/42sh
+    COMMAND ../tests/./install.sh
+    COMMAND ./tests.py
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/tests)
 
 add_executable(42sh ${SRC})

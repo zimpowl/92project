@@ -19,7 +19,7 @@ static int script_mode(char *name)
 {
   int fd = open(name, O_RDONLY);
   if (fd == -1)
-    errx(127, "%s: No such file or directory", name);
+    errx(1, "%s: No such file or directory", name);
   char line[256];
   line[0] = '\0';
   char buf[1];
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
     return 0;
   if (!fnmatch("--v*", argv[1], 0))
   {
-    printf("Version 0.5\n");
+    printf("Version 0.8\n");
     return 0;
   }
   else

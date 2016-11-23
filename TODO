@@ -23,28 +23,28 @@ lexer   [benamo_l]     :
 
 parser  [ziwiak_p]     : IN PROGRESS
   - ast tree                  : DONE
-  - print tree                : IN PROGRESS ++
+  - print tree                : DONE
   - input                     : DONE
-  - list                      : IN PROGRESS
-  - and_or                    : IN PROGRESS
-  - pipeline                  : IN PROGRESS
-  - command                   : IN PROGRESS
-  - command shell             : IN PROGRESS
-  - command simple            : IN PROGRESS +
+  - list                      : DONE
+  - and_or                    : DONE
+  - pipeline                  : DONE
+  - command                   : IN PROGRESS ++
+  - command shell             : IN PROGRESS +
+  - command simple            : IN PROGRESS ++
   - funcdec                   : NOT DONE
-  - redirection               : NOT DONE
-  - prefix                    : IN PROGRESS
-  - element                   : IN PROGRESS
-  - compound_list             : IN PROGRESS
+  - redirection               : IN PROGRESS
+  - prefix                    : IN PROGRESS +
+  - element                   : IN PROGRESS ++
+  - compound_list             : DONE
   - rule_for                  : NOT DONE
-  - rule_while                : IN PROGRESS
-  - rule_until                : IN PROGRESS
+  - rule_while                : DONE
+  - rule_until                : DONE
   - rule_case                 : NOT DONE
   - else_clause               : NOT DONE
   - case_clause               : NOT DONE
   - case_item                 : NOT DONE
-  - do_group                  : IN PROGRESS
-  - rule_if                   : IN PROGRESS
+  - do_group                  : IN PROGRESS ++
+  - rule_if                   : DONE
 
 
 exec    [elghoz_d]     : IN PROGRESS
