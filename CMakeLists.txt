@@ -21,6 +21,7 @@ add_custom_target(ast
   COMMAND eog hello.png)
 
 add_custom_target(check 
+    COMMAND cp ${CMAKE_CURRENT_BINARY_DIR}/42sh ../tests
     COMMAND ../tests/./install.sh
     COMMAND ./tests.py
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/tests)

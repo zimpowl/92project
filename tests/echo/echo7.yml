@@ -1,11 +1,11 @@
 42exit_code: 0
 42stderr: ''
-42stdout: 'okokok
+42stdout: '\net\t
 
   '
 exit_code: 0
-input: echo ok'ok'ok
+input: echo "\net\t"
 stderr: ''
-stdout: 'okokok
+stdout: '"\net\t"
 
   '

@@ -21,7 +21,7 @@ def first_header():
   print( '\n' )
 
 def header(category):
-  print( '=' * 15 + ' \033[33m', category, '\033[37m ' + '=' * 15)
+  print( '=' * 15 + ' \033[36m', category, '\033[37m ' + '=' * 15)
   print( '\n' )
 
 def start_test(category):
@@ -88,8 +88,15 @@ def start_test(category):
   status = " \033[32mSUCCESS\033[37m "
   if percent < 50:
     status = "   \033[31mFAIL\033[37m  "
-    
-  print(' '*(70 - len(str(percent))) + str(percent) + '%', status, timeout(timer_start))
+  perc = str(percent)
+  if percent < 26:
+    perc = '\033[31m' + perc + '%\033[37m'
+  else: 
+    if percent < 76:
+      perc = '\033[33m' + perc + '%\033[37m'
+    else:
+      perc = '\033[32m' + perc + '%\033[37m'
+  print(' '*(70 - len(str(percent))) + perc , status, timeout(timer_start))
 
 
 

@@ -13,6 +13,28 @@ char *append(char *s, char c)
   return res;
 }
 
+char *my_insert(char *s1, char *s2, int n)
+{
+  if (!strlen(s1))
+    return s2;
+  int len = strlen(s1) + strlen(s2);
+  char *res = malloc(len * sizeof (char));
+  if (!res)
+    return NULL;
+  int i = 0;
+  for (i = 0; i < n; i++)
+    res[i] = s1[i];
+  int i1 = i;
+  int len2 = strlen(s2);
+  for (int i2 = 0; i2 < len2; i2++ , i++)
+    res[i] = s2[i2];
+  for (; i < len; i++ , i1++)
+    res[i] = s1[i1];
+  res[len] = '\0';
+ // free(s1);
+  return res;
+}
+
 char *my_delete(char *s, int n)
 {
   int len = strlen(s);
@@ -24,11 +46,8 @@ char *my_delete(char *s, int n)
     res[i] = s[i];
   for (; i < len - 1; i++)
     res[i] = s[i + 1];
- /*memmove(&s[i], &s[i + 1], len - i);
-  s = realloc(s, (len - 1) * sizeof (char));
-  s[len - 1] = '\0';*/
   res[len - 1] = '\0';
-  //free(s);
+  free(s);
   return res;
 }
 
