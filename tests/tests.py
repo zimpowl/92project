@@ -17,11 +17,11 @@ timer = 0
 timer_begin = default_timer();
 
 def first_header():
-  print( '=' * 25 + ' SUITE TEST ' + '=' * 25 )
+  print( '=' * 25 + ' \033[33mSUITE TEST\033[37m ' + '=' * 25 )
   print( '\n' )
 
 def header(category):
-  print( '=' * 15 + ' ', category, ' ' + '=' * 15)
+  print( '=' * 15 + ' \033[33m', category, '\033[37m ' + '=' * 15)
   print( '\n' )
 
 def start_test(category):
@@ -32,7 +32,7 @@ def start_test(category):
   
   for index, filename in enumerate(glob.glob(category + '/*')):
     if default_timer() - timer_begin > float(timer) and parsed.timeout:
-      print(timer, "secondes past...  TIME DONE !!")
+      print(timer, "\033[31msecondes past...  TIME DONE !!\033[37m")
       exit(1)
     chronos = default_timer()
     
@@ -72,10 +72,10 @@ def start_test(category):
       print("error\n")
     
     if out1 == out2 and err1 == err2 and exit_code1 == exit_code2:
-      value = "OK"
+      value = "\033[32mOK\033[37m"
       total = total + 1
     else:
-      value = "KO"	
+      value = "\033[31mKO\033[37m"	
       exit_code = 1
     
     result_value =  ' ' * (69 - len(conf['input'])) + str(value)
@@ -85,16 +85,16 @@ def start_test(category):
   
   percent = round((total/ (index +1)) * 100, 1)
   
-  status = " SUCCESS "
+  status = " \033[32mSUCCESS\033[37m "
   if percent < 50:
-    status = "   FAIL  "
+    status = "   \033[31mFAIL\033[37m  "
     
   print(' '*(70 - len(str(percent))) + str(percent) + '%', status, timeout(timer_start))
 
 
 
 def timeout(timer):
-  return '  ' + str(round(default_timer() - timer, 4)) + " s"
+  return ' \033[33m' + str(round(default_timer() - timer, 4)) + " s\033[37m"
 
 if parsed.list:
   print("lists")
@@ -105,6 +105,7 @@ if parsed.list:
   print("multiples")
   print("if")
   print("while")
+  print("echo")
   print("testvalid")
   exit(0)
 
@@ -128,5 +129,6 @@ else:
   start_test("multiples")
   start_test("if")
   start_test("while")
+  start_test("echo")
   start_test("testvalid")
   exit(0)

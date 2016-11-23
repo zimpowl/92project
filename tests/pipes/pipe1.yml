@@ -1,11 +1,1 @@
-42exit_code: 0
-42stderr: ''
-42stdout: '     16      16     131
-
-  '
-exit_code: 0
 input: ls | wc
-stderr: ''
-stdout: '     16      16     131
-
-  '
