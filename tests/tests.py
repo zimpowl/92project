@@ -106,6 +106,7 @@ if parsed.list:
   print("while")
   print("echo")
   print("testvalid")
+  print("testfor")
   exit(0)
 
 if parsed.timeout:
@@ -129,4 +130,5 @@ else:
   start_test("while")
   start_test("echo")
   start_test("testvalid")
+  start_test("testfor")
   exit(0)

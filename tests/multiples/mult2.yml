@@ -1,11 +1,11 @@
 42exit_code: 0
 42stderr: ''
 42stdout: "42sh\naide.py\nands\ncommands\necho\nif\ninstall.sh\nmultiples\nors\npipes\n\
-  requirements.txt\nt1.py\ntestnonvalid\ntests.py\ntestsuite.py\ntestvalid\nwhile\n\
-  \     17      17     140\n"
+  requirements.txt\nt1.py\ntest8.yml\ntestfor\ntestnonvalid\ntests.py\ntestsuite.py\n\
+  testvalid\nwhile\n     19      19     158\n"
 exit_code: 0
 input: ls && ls | wc
 stderr: ''
 stdout: "42sh\naide.py\nands\ncommands\necho\nif\ninstall.sh\nmultiples\nors\npipes\n\
-  requirements.txt\nt1.py\ntestnonvalid\ntests.py\ntestsuite.py\ntestvalid\nwhile\n\
-  \     17      17     140\n"
+  requirements.txt\nt1.py\ntest8.yml\ntestfor\ntestnonvalid\ntests.py\ntestsuite.py\n\
+  testvalid\nwhile\n     19      19     158\n"

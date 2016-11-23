@@ -2,7 +2,7 @@
 42stderr: "bash: -c: ligne 1: erreur de syntaxe : fin de fichier pr\xE9matur\xE9e\n"
 42stdout: ''
 exit_code: 0
-input: a=5; while a==5; do ls done
+input: a=5; while a=6; do ls done
 stderr: ''
 stdout: '42sh
 
@@ -27,6 +27,10 @@ stdout: '42sh
   requirements.txt
 
   t1.py
+
+  test8.yml
+
+  testfor
 
   testnonvalid
 

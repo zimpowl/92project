@@ -1,0 +1,47 @@
+42exit_code: 0
+42stderr: ''
+42stdout: 'mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  '
+exit_code: 0
+input: for i in 1 2 3 4 5 6 7 8 9 10; do echo mdrr les acus; done
+stderr: ''
+stdout: 'mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  mdrr les acus
+
+  '
