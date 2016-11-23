@@ -105,6 +105,7 @@ if parsed.list:
   print("multiples")
   print("if")
   print("while")
+  print("testvalid")
   exit(0)
 
 if parsed.timeout:
@@ -127,4 +128,5 @@ else:
   start_test("multiples")
   start_test("if")
   start_test("while")
+  start_test("testvalid")
   exit(0)

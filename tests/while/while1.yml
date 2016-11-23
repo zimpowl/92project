@@ -26,6 +26,10 @@ stdout: '42sh
 
   t1.py
 
+  testnonvalid
+
+  tests
+
   tests.py
 
   testsuite.py

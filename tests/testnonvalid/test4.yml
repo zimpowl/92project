@@ -1,0 +1,40 @@
+42exit_code: 0
+42stderr: ''
+42stdout: 'micha
+
+  mazeheri
+
+  micha
+
+  mazeheri
+
+  micha
+
+  mazeheri
+
+  micha
+
+  mazeheri
+
+  '
+exit_code: 0
+input: { echo micha; echo mazeheri; echo micha; echo mazeheri; { ; { echo micha; echo
+  mazeheri; echo micha; echo mazeheri; }
+stderr: ''
+stdout: 'micha
+
+  mazeheri
+
+  micha
+
+  mazeheri
+
+  micha
+
+  mazeheri
+
+  micha
+
+  mazeheri
+
+  '

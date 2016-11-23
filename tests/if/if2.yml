@@ -22,6 +22,10 @@
 
   t1.py
 
+  testnonvalid
+
+  tests
+
   tests.py
 
   testsuite.py
@@ -49,6 +53,10 @@
   requirements.txt
 
   t1.py
+
+  testnonvalid
+
+  tests
 
   tests.py
 
@@ -84,6 +92,10 @@ stdout: '42sh
 
   t1.py
 
+  testnonvalid
+
+  tests
+
   tests.py
 
   testsuite.py
@@ -111,6 +123,10 @@ stdout: '42sh
   requirements.txt
 
   t1.py
+
+  testnonvalid
+
+  tests
 
   tests.py
 
