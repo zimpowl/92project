@@ -8,6 +8,4 @@ input: echo ok
 stderr: ''
 stdout: 'ok
 
-  ok
-
   '

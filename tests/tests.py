@@ -97,7 +97,6 @@ def timeout(timer):
   return ' \033[33m' + str(round(default_timer() - timer, 4)) + " s\033[37m"
 
 if parsed.list:
-  print("lists")
   print("commands")
   print("ands")
   print("ors")
@@ -121,7 +120,6 @@ if parsed.category:
   exit(0)
 else:
   first_header()
-  start_test("lists")
   start_test("commands")
   start_test("ands")
   start_test("ors")

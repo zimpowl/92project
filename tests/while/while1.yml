@@ -1,1 +1,41 @@
+42exit_code: 1
+42stderr: "bash: -c: ligne 1: erreur de syntaxe : fin de fichier pr\xE9matur\xE9e\n"
+42stdout: ''
+exit_code: 0
 input: a=5; while a==5; do ls done
+stderr: ''
+stdout: '42sh
+
+  aide.py
+
+  ands
+
+  commands
+
+  echo
+
+  if
+
+  install.sh
+
+  multiples
+
+  ors
+
+  pipes
+
+  requirements.txt
+
+  t1.py
+
+  testnonvalid
+
+  tests.py
+
+  testsuite.py
+
+  testvalid
+
+  while
+
+  '

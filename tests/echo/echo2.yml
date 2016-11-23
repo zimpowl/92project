@@ -6,8 +6,6 @@
 exit_code: 0
 input: echo 'ok'
 stderr: ''
-stdout: 'ok
-
-  ok
+stdout: '''ok''
 
   '

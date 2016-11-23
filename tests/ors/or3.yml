@@ -1,1 +1,77 @@
+42exit_code: 0
+42stderr: 'bash: lss : commande introuvable
+
+  '
+42stdout: '42sh
+
+  aide.py
+
+  ands
+
+  commands
+
+  echo
+
+  if
+
+  install.sh
+
+  multiples
+
+  ors
+
+  pipes
+
+  requirements.txt
+
+  t1.py
+
+  testnonvalid
+
+  tests.py
+
+  testsuite.py
+
+  testvalid
+
+  while
+
+  '
+exit_code: 0
 input: lss || ls
+stderr: ''
+stdout: '42sh
+
+  aide.py
+
+  ands
+
+  commands
+
+  echo
+
+  if
+
+  install.sh
+
+  multiples
+
+  ors
+
+  pipes
+
+  requirements.txt
+
+  t1.py
+
+  testnonvalid
+
+  tests.py
+
+  testsuite.py
+
+  testvalid
+
+  while
+
+  '

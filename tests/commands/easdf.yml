@@ -8,6 +8,4 @@ input: echo meeeee
 stderr: ''
 stdout: 'meeeee
 
-  meeeee
-
   '
