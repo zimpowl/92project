@@ -1,11 +1,11 @@
 42exit_code: 0
 42stderr: ''
-42stdout: 'nokn
-
-  '
+42stdout: "noknok\n ok\n"
 exit_code: 0
-input: echo -e \nok\n
+input: echo -e \nok\n 'ok\nok'
 stderr: ''
-stdout: 'nokn
+stdout: 'nokn ok
+
+  ok
 
   '

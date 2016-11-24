@@ -42,7 +42,7 @@
 
   while
 
-  ok42sh
+  42sh
 
   aide.py
 
@@ -84,6 +84,7 @@
 
   while
 
+  ok
 
   '
 exit_code: 0

@@ -33,9 +33,19 @@ static struct string_i dolar(struct string_i S)
   return S;
 }
 
+static struct string_i my_print_e(struct string_i S)
+{
+  printf("%.*s", S.i, S.s);
+  int max = S.i;
+  for (int i = 0; i < max; i++)
+    S.s = my_delete(S.s, 0);
+  S.i = 0;
+  return S;
+}
+
 static struct string_i echo_e(char c, struct string_i S)
 {
-  fflush(NULL);
+  S = my_print_e(S);
   if (c == 'n')
     printf("\n");
   else if (c == 't')
@@ -62,22 +72,16 @@ static struct string_i echo_e(char c, struct string_i S)
 static struct string_i in_quoted(struct string_i S, int e)
 {
   int begin = S.i;
-  S.i++;
+  S.s = my_delete(S.s, begin);
   while (S.s[S.i] != '\'')
   {
     if (S.s[S.i] == '\\' && e)
     {
-      fflush(NULL);
       S = echo_e(S.s[S.i + 1], S);
-      //S.s = my_delete(S.s, S.i);
-      //S.s = my_delete(S.s, S.i);
-      //S.i += 2;
     }
     else
       S.i++;
   }
-  S.s = my_delete(S.s, begin);
-  S.i--;
   S.s = my_delete(S.s, S.i);
   return S;
 }
@@ -85,7 +89,7 @@ static struct string_i in_quoted(struct string_i S, int e)
 static struct string_i in_dquoted(struct string_i S, int e)
 {
   int begin = S.i;
-  S.i++;
+  S.s = my_delete(S.s, begin);
   while (S.s[S.i] != '\"')
   {
     if (S.s[S.i] == '$')
@@ -98,17 +102,11 @@ static struct string_i in_dquoted(struct string_i S, int e)
     }
     else if (S.s[S.i] == '\\' && e)
     {
-      fflush(NULL);
       S = echo_e(S.s[S.i + 1], S);
-      //S.s = my_delete(S.s, S.i);
-      //S.s = my_delete(S.s, S.i);
-      //S.i ++;
     }
     else
       S.i++;
   }
-  S.s = my_delete(S.s, begin);
-  S.i--;
   S.s = my_delete(S.s, S.i);
   return S;
 }
@@ -137,25 +135,22 @@ struct string_i echo_one(struct string_i S, int e)
 static void echo_not_e(int argc, char *args[], int e)
 {
   char *s = args[argc + 1];
+  if (!s)
+    return;
   struct string_i S = init_string(s, 0);
-  fflush(NULL);
   S = echo_one(S, e);
-  fflush(NULL);
   printf("%s", S.s);
   for (int i = argc + 2; args[i]; i++)
   {
     S = init_string(args[i], 0);
     S = echo_one(S, e);
-    fflush(NULL);
     printf(" %s", S.s);
   }
 }
 
 static int echo_arg(int n, int e, int argc, char *args[])
 {
-  fflush(NULL);
   echo_not_e(argc, args, e);
-  fflush(NULL);
   if (!n)
     printf("\n");
   return 0;

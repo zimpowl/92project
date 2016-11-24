@@ -1,6 +1,6 @@
 42exit_code: 0
 42stderr: ''
-42stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-RgOtzslkim,guid=8dc06c523735d4ed81a0ddd658374bb7"
+42stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-ZYnETvo2X7,guid=e4d5c5a3280dbedf7e894ff858376616"
 
   export DEFAULTS_PATH="/usr/share/gconf/i3.default.path"
 
@@ -34,9 +34,9 @@
 
   export MAKELEVEL="4"
 
-  export MAKE_TERMERR="/dev/pts/0"
+  export MAKE_TERMERR="/dev/pts/1"
 
-  export MAKE_TERMOUT="/dev/pts/0"
+  export MAKE_TERMOUT="/dev/pts/1"
 
   export MANDATORY_PATH="/usr/share/gconf/i3.mandatory.path"
 
@@ -58,9 +58,9 @@
 
   export SHLVL="2"
 
-  export SSH_AGENT_PID="6482"
+  export SSH_AGENT_PID="1524"
 
-  export SSH_AUTH_SOCK="/tmp/ssh-kuPuYRIABuMo/agent.6424"
+  export SSH_AUTH_SOCK="/tmp/ssh-qgrIxtyr8lEr/agent.1466"
 
   export TERM="xterm-256color"
 
@@ -68,7 +68,7 @@
 
   export VTE_VERSION="4205"
 
-  export WINDOWID="25165834"
+  export WINDOWID="20972298"
 
   export XAUTHORITY="/home/lea/.Xauthority"
 
@@ -88,9 +88,9 @@
 
   export XDG_SESSION_DESKTOP="i3"
 
-  export XDG_SESSION_ID="c10"
+  export XDG_SESSION_ID="c2"
 
-  export XDG_SESSION_PATH="/org/freedesktop/DisplayManager/Session4"
+  export XDG_SESSION_PATH="/org/freedesktop/DisplayManager/Session0"
 
   export XDG_SESSION_TYPE="x11"
 
@@ -102,7 +102,7 @@
 exit_code: 0
 input: export
 stderr: ''
-stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-RgOtzslkim,guid=8dc06c523735d4ed81a0ddd658374bb7"
+stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-ZYnETvo2X7,guid=e4d5c5a3280dbedf7e894ff858376616"
 
   export DEFAULTS_PATH="/usr/share/gconf/i3.default.path"
 
@@ -136,9 +136,9 @@ stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-RgOtzslkim,gui
 
   export MAKELEVEL="4"
 
-  export MAKE_TERMERR="/dev/pts/0"
+  export MAKE_TERMERR="/dev/pts/1"
 
-  export MAKE_TERMOUT="/dev/pts/0"
+  export MAKE_TERMOUT="/dev/pts/1"
 
   export MANDATORY_PATH="/usr/share/gconf/i3.mandatory.path"
 
@@ -160,9 +160,9 @@ stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-RgOtzslkim,gui
 
   export SHLVL="2"
 
-  export SSH_AGENT_PID="6482"
+  export SSH_AGENT_PID="1524"
 
-  export SSH_AUTH_SOCK="/tmp/ssh-kuPuYRIABuMo/agent.6424"
+  export SSH_AUTH_SOCK="/tmp/ssh-qgrIxtyr8lEr/agent.1466"
 
   export TERM="xterm-256color"
 
@@ -170,7 +170,7 @@ stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-RgOtzslkim,gui
 
   export VTE_VERSION="4205"
 
-  export WINDOWID="25165834"
+  export WINDOWID="20972298"
 
   export XAUTHORITY="/home/lea/.Xauthority"
 
@@ -190,9 +190,9 @@ stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-RgOtzslkim,gui
 
   export XDG_SESSION_DESKTOP="i3"
 
-  export XDG_SESSION_ID="c10"
+  export XDG_SESSION_ID="c2"
 
-  export XDG_SESSION_PATH="/org/freedesktop/DisplayManager/Session4"
+  export XDG_SESSION_PATH="/org/freedesktop/DisplayManager/Session0"
 
   export XDG_SESSION_TYPE="x11"
 
