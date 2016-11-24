@@ -47,7 +47,7 @@ int list_a(struct ntree *ntree)
     if (i == 0 || j == 0)
       return 0;
   }
-  return (i + j);
+  return j;
 }
 
 int and_or_a(struct ntree *ntree)
@@ -199,20 +199,22 @@ int pipeline_a(struct ntree *ntree)
   for (int i = 0; i < cnt; i++)
   {
     struct ntree *newcom = new->sons[1];
-    bigtab[cnt - i] = malloc(sizeof (newcom->name));
+    bigtab[cnt - i] = malloc(sizeof (newcom->name) * 5);
     bigtab[cnt - i][0] = newcom->name;
     for (unsigned j = 0; j < newcom->size; j++)
     {
-      bigtab[cnt - i][j + 1] = new->sons[j]->name;
+      //bigtab[cnt - i] = realloc(bigtab[0], sizeof (new->name) * sizeof (new->sons[j]->name));
+      bigtab[cnt - i][j + 1] = newcom->sons[j]->name;
     }
     bigtab[cnt - i][newcom->size + 1] = NULL;
     new = new->sons[0];
   }
 
-  bigtab[0] = malloc(sizeof (new->name));
+  bigtab[0] = malloc(sizeof (new->name) * 5);
   bigtab[0][0] = new->name;
   for (unsigned j = 0; j < new->size; j++)
   {
+    //bigtab[0] = realloc(bigtab[0], sizeof (new->name) * sizeof (new->sons[j]->name));
     bigtab[0][j + 1] = new->sons[j]->name;
   }
   bigtab[0][new->size + 1] = NULL;

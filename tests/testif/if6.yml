@@ -1,0 +1,15 @@
+42exit_code: 0
+42stderr: ''
+42stdout: 'true
+
+  true
+
+  '
+exit_code: 0
+input: if echo true; then echo true; else echo false; fi
+stderr: ''
+stdout: 'true
+
+  true
+
+  '

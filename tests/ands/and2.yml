@@ -10,15 +10,13 @@
 
   echo
 
-  if
+  export
 
   install.sh
 
   multiples
 
   ors
-
-  pipes
 
   requirements.txt
 
@@ -28,7 +26,11 @@
 
   testfor
 
+  testif
+
   testnonvalid
+
+  testpipe
 
   tests.py
 
@@ -38,9 +40,7 @@
 
   while
 
-  ok
-
-  42sh
+  b42sh
 
   aide.py
 
@@ -50,15 +50,13 @@
 
   echo
 
-  if
+  export
 
   install.sh
 
   multiples
 
   ors
-
-  pipes
 
   requirements.txt
 
@@ -68,7 +66,11 @@
 
   testfor
 
+  testif
+
   testnonvalid
+
+  testpipe
 
   tests.py
 
@@ -78,9 +80,10 @@
 
   while
 
+
   '
 exit_code: 0
-input: ls && echo ok && ls
+input: (ls && echo b && ls)
 stderr: ''
 stdout: '42sh
 
@@ -92,15 +95,13 @@ stdout: '42sh
 
   echo
 
-  if
+  export
 
   install.sh
 
   multiples
 
   ors
-
-  pipes
 
   requirements.txt
 
@@ -110,7 +111,11 @@ stdout: '42sh
 
   testfor
 
+  testif
+
   testnonvalid
+
+  testpipe
 
   tests.py
 
@@ -120,7 +125,9 @@ stdout: '42sh
 
   while
 
-  ok42sh
+  b
+
+  42sh
 
   aide.py
 
@@ -130,15 +137,13 @@ stdout: '42sh
 
   echo
 
-  if
+  export
 
   install.sh
 
   multiples
 
   ors
-
-  pipes
 
   requirements.txt
 
@@ -148,7 +153,11 @@ stdout: '42sh
 
   testfor
 
+  testif
+
   testnonvalid
+
+  testpipe
 
   tests.py
 
@@ -157,6 +166,5 @@ stdout: '42sh
   testvalid
 
   while
-
 
   '

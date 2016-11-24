@@ -1,7 +1,5 @@
 42exit_code: 0
-42stderr: 'bash: lss : commande introuvable
-
-  '
+42stderr: ''
 42stdout: '42sh
 
   aide.py
@@ -12,15 +10,13 @@
 
   echo
 
-  if
+  export
 
   install.sh
 
   multiples
 
   ors
-
-  pipes
 
   requirements.txt
 
@@ -30,7 +26,11 @@
 
   testfor
 
+  testif
+
   testnonvalid
+
+  testpipe
 
   tests.py
 
@@ -43,7 +43,9 @@
   '
 exit_code: 0
 input: lss || ls
-stderr: ''
+stderr: 'bash: lss : commande introuvable
+
+  '
 stdout: '42sh
 
   aide.py
@@ -54,15 +56,13 @@ stdout: '42sh
 
   echo
 
-  if
+  export
 
   install.sh
 
   multiples
 
   ors
-
-  pipes
 
   requirements.txt
 
@@ -72,7 +72,11 @@ stdout: '42sh
 
   testfor
 
+  testif
+
   testnonvalid
+
+  testpipe
 
   tests.py
 

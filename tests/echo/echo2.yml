@@ -1,7 +1,7 @@
 42exit_code: 0
 42stderr: ''
-42stdout: "ok\n\t\n"
+42stdout: "\n\tok\n"
 exit_code: 0
 input: echo -e "ok\n\t"
 stderr: ''
-stdout: "\n\tok\n"
+stdout: "ok\n\t\n"

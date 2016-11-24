@@ -10,15 +10,13 @@
 
   echo
 
-  if
+  export
 
   install.sh
 
   multiples
 
   ors
-
-  pipes
 
   requirements.txt
 
@@ -28,7 +26,96 @@
 
   testfor
 
+  testif
+
   testnonvalid
+
+  testpipe
+
+  tests.py
+
+  testsuite.py
+
+  testvalid
+
+  while
+
+  ok42sh
+
+  aide.py
+
+  ands
+
+  commands
+
+  echo
+
+  export
+
+  install.sh
+
+  multiples
+
+  ors
+
+  requirements.txt
+
+  t1.py
+
+  test8.yml
+
+  testfor
+
+  testif
+
+  testnonvalid
+
+  testpipe
+
+  tests.py
+
+  testsuite.py
+
+  testvalid
+
+  while
+
+
+  '
+exit_code: 0
+input: ls && (echo ok && ls)
+stderr: ''
+stdout: '42sh
+
+  aide.py
+
+  ands
+
+  commands
+
+  echo
+
+  export
+
+  install.sh
+
+  multiples
+
+  ors
+
+  requirements.txt
+
+  t1.py
+
+  test8.yml
+
+  testfor
+
+  testif
+
+  testnonvalid
+
+  testpipe
 
   tests.py
 
@@ -50,15 +137,13 @@
 
   echo
 
-  if
+  export
 
   install.sh
 
   multiples
 
   ors
-
-  pipes
 
   requirements.txt
 
@@ -68,7 +153,11 @@
 
   testfor
 
+  testif
+
   testnonvalid
+
+  testpipe
 
   tests.py
 
@@ -77,86 +166,5 @@
   testvalid
 
   while
-
-  '
-exit_code: 0
-input: ls && (echo ok && ls)
-stderr: ''
-stdout: '42sh
-
-  aide.py
-
-  ands
-
-  commands
-
-  echo
-
-  if
-
-  install.sh
-
-  multiples
-
-  ors
-
-  pipes
-
-  requirements.txt
-
-  t1.py
-
-  test8.yml
-
-  testfor
-
-  testnonvalid
-
-  tests.py
-
-  testsuite.py
-
-  testvalid
-
-  while
-
-  ok42sh
-
-  aide.py
-
-  ands
-
-  commands
-
-  echo
-
-  if
-
-  install.sh
-
-  multiples
-
-  ors
-
-  pipes
-
-  requirements.txt
-
-  t1.py
-
-  test8.yml
-
-  testfor
-
-  testnonvalid
-
-  tests.py
-
-  testsuite.py
-
-  testvalid
-
-  while
-
 
   '

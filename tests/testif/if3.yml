@@ -10,15 +10,13 @@
 
   echo
 
-  if
+  export
 
   install.sh
 
   multiples
 
   ors
-
-  pipes
 
   requirements.txt
 
@@ -28,7 +26,11 @@
 
   testfor
 
+  testif
+
   testnonvalid
+
+  testpipe
 
   tests.py
 
@@ -54,15 +56,13 @@ stdout: '42sh
 
   echo
 
-  if
+  export
 
   install.sh
 
   multiples
 
   ors
-
-  pipes
 
   requirements.txt
 
@@ -72,7 +72,11 @@ stdout: '42sh
 
   testfor
 
+  testif
+
   testnonvalid
+
+  testpipe
 
   tests.py
 

@@ -18,7 +18,7 @@ struct btree *new_btree(struct word *word,
 }
 
 //return a new struct word from a token, a name, a value
-struct word *new_word(enum token_parser *token, char *name, char *value)
+struct word *new_word(enum token_parser token, char *name, char *value)
 { 
   struct word *word = malloc(sizeof (struct word));
   if (!word)
@@ -47,11 +47,12 @@ struct btree *add_word_rec(struct btree *btree, struct word *word)
 // create a word from parameters and add it to the btree
 //do nothing and return 0 if everithing ok or word allready exits
 //return 1 if error
-int add_word(enum token_parser *token, char *name, char *value)
+int add_word(enum token_parser token, char *name, char *value)
 {struct word *res = search_word(name);
   if (res)
   {
     res->token = token;
+    //free(res->value);
     res->value = value;
     return 1;
   }
