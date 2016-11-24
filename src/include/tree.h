@@ -31,7 +31,9 @@ enum token_parser
   OPERATOR,
   RESERVED_WORD,
   COMMAND,
-  TEST
+  TEST,
+  VAR,
+  ENV_VAR
 };
 
 /**
@@ -48,7 +50,7 @@ struct ntree
 
 struct word
 {
-  enum token_parser *token;
+  enum token_parser token;
   char *name;
   char *value;
 };
@@ -78,7 +80,7 @@ struct file
 
 
 //if sucess to add word return 1 else return 0
-int add_word(enum token_parser *token, char *name, char *value);
+int add_word(enum token_parser token, char *name, char *value);
 
 //delete word from name, do nothing if not found
 void delete_word(char *name);
