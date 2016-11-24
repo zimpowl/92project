@@ -1,0 +1,24 @@
+42exit_code: 0
+42stderr: ''
+42stdout: 'true
+
+  true
+
+  true
+
+  paul
+
+  '
+exit_code: 0
+input: if echo true; then if echo true; then if echo true; then echo paul; fi; fi;
+  fi
+stderr: ''
+stdout: 'true
+
+  true
+
+  true
+
+  paul
+
+  '

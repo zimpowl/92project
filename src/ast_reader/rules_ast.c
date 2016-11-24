@@ -20,12 +20,14 @@ int rules_a(struct ntree *ntree)
 
 int rule_if_a(struct ntree *ntree)
 {
-  int res = manage_a(ntree->sons[0]);
-  if (res == 0)
-    return manage_a(ntree->sons[2]);
-  else if (strcmp(ntree->sons[3]->name, "elif") == 0)
-    res = manage_a(ntree->sons[3]);
-  return res;
+    int res = manage_a(ntree->sons[0]);
+    if (res == 0)
+      return manage_a(ntree->sons[2]);
+    else if (strcmp(ntree->sons[3]->name, "elif") == 0)
+      res = rule_if_a(ntree->sons[3]);
+    else if (strcmp(ntree->sons[3]->name, "else") == 0)
+      res = manage_a(ntree->sons[3]->sons[0]);
+    return res;
 }
 
 

@@ -37,7 +37,43 @@
   3
 
   '
-exit_code: 127
+exit_code: 0
 input: for i in 1 2 3; do for j in 1 2 3; do echo $i; echo $j; done; done
 stderr: ''
-stdout: ''
+stdout: '1
+
+  1
+
+  1
+
+  2
+
+  1
+
+  3
+
+  2
+
+  1
+
+  2
+
+  2
+
+  2
+
+  3
+
+  3
+
+  1
+
+  3
+
+  2
+
+  3
+
+  3
+
+  '

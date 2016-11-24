@@ -1,0 +1,59 @@
+42exit_code: 0
+42stderr: ''
+42stdout: 'bin
+
+  boot
+
+  cdrom
+
+  dev
+
+  etc
+
+  home
+
+  initrd.img
+
+  initrd.img.old
+
+  lib
+
+  lib64
+
+  lost+found
+
+  media
+
+  mnt
+
+  opt
+
+  proc
+
+  root
+
+  run
+
+  sbin
+
+  snap
+
+  srv
+
+  sys
+
+  tmp
+
+  usr
+
+  var
+
+  vmlinuz
+
+  vmlinuz.old
+
+  '
+exit_code: 0
+input: ( ls / | sort | cat | cat | sort; ) | sort
+stderr: "sort: \xE9chec de lecture: -: Mauvais descripteur de fichier\n"
+stdout: ''
