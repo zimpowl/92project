@@ -1,19 +1,11 @@
 42exit_code: 0
 42stderr: ''
-<<<<<<< HEAD
-42stdout: '     20      20     172
-=======
 42stdout: '     21      21     185
->>>>>>> 601d14b4577def15a6c9a2a3f5c38bfc902c7c2a
 
   '
 exit_code: 0
 input: ls | wc
 stderr: ''
-<<<<<<< HEAD
-stdout: '     20      20     172
-=======
 stdout: '     21      21     185
->>>>>>> 601d14b4577def15a6c9a2a3f5c38bfc902c7c2a
 
   '
