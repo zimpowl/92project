@@ -1,11 +1,11 @@
 42exit_code: 0
 42stderr: ''
-42stdout: '     20      20     178
+42stdout: '     21      21     185
 
   '
 exit_code: 0
 input: ls | ls |wc
 stderr: ''
-stdout: '     20      20     178
+stdout: '     21      21     185
 
   '

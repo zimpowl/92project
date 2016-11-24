@@ -1,11 +1,11 @@
 42exit_code: 0
 42stderr: ''
-42stdout: 'ok
+42stdout: '''ok''
 
   '
 exit_code: 0
 input: echo 'ok'
 stderr: ''
-stdout: '''ok''
+stdout: 'ok
 
   '

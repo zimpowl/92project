@@ -10,6 +10,50 @@
 
   echo
 
+  export
+
+  install.sh
+
+  multiples
+
+  ors
+
+  requirements.txt
+
+  t1.py
+
+  test8.yml
+
+  testfor
+
+  testfunction
+
+  testif
+
+  testnonvalid
+
+  testpipe
+
+  tests.py
+
+  testsuite.py
+
+  testvalid
+
+  while
+
+  42sh
+
+  aide.py
+
+  ands
+
+  commands
+
+  echo
+
+  export
+
   install.sh
 
   multiples
@@ -41,46 +85,6 @@
   while
 
   b
-
-  42sh
-
-  aide.py
-
-  ands
-
-  commands
-
-  echo
-
-  install.sh
-
-  multiples
-
-  ors
-
-  requirements.txt
-
-  t1.py
-
-  test8.yml
-
-  testfor
-
-  testfunction
-
-  testif
-
-  testnonvalid
-
-  testpipe
-
-  tests.py
-
-  testsuite.py
-
-  testvalid
-
-  while
 
   '
 exit_code: 0
@@ -96,45 +100,7 @@ stdout: '42sh
 
   echo
 
-  install.sh
-
-  multiples
-
-  ors
-
-  requirements.txt
-
-  t1.py
-
-  test8.yml
-
-  testfor
-
-  testfunction
-
-  testif
-
-  testnonvalid
-
-  testpipe
-
-  tests.py
-
-  testsuite.py
-
-  testvalid
-
-  while
-
-  42sh
-
-  aide.py
-
-  ands
-
-  commands
-
-  echo
+  export
 
   install.sh
 
@@ -167,5 +133,47 @@ stdout: '42sh
   while
 
   b
+
+  42sh
+
+  aide.py
+
+  ands
+
+  commands
+
+  echo
+
+  export
+
+  install.sh
+
+  multiples
+
+  ors
+
+  requirements.txt
+
+  t1.py
+
+  test8.yml
+
+  testfor
+
+  testfunction
+
+  testif
+
+  testnonvalid
+
+  testpipe
+
+  tests.py
+
+  testsuite.py
+
+  testvalid
+
+  while
 
   '

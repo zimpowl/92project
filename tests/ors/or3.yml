@@ -1,7 +1,5 @@
 42exit_code: 0
-42stderr: 'bash: lss : commande introuvable
-
-  '
+42stderr: ''
 42stdout: '42sh
 
   aide.py
@@ -11,6 +9,8 @@
   commands
 
   echo
+
+  export
 
   install.sh
 
@@ -45,7 +45,9 @@
   '
 exit_code: 0
 input: lss || ls
-stderr: ''
+stderr: 'bash: lss : commande introuvable
+
+  '
 stdout: '42sh
 
   aide.py
@@ -55,6 +57,8 @@ stdout: '42sh
   commands
 
   echo
+
+  export
 
   install.sh
 

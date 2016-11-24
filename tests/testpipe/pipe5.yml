@@ -1,6 +1,10 @@
 42exit_code: 0
-42stderr: ''
-42stdout: 'bin
+42stderr: "sort: \xE9chec de lecture: -: Mauvais descripteur de fichier\n"
+42stdout: ''
+exit_code: 0
+input: ( ls / | sort | cat | cat | sort; ) | sort
+stderr: ''
+stdout: 'bin
 
   boot
 
@@ -53,7 +57,3 @@
   vmlinuz.old
 
   '
-exit_code: 0
-input: ( ls / | sort | cat | cat | sort; ) | sort
-stderr: "sort: \xE9chec de lecture: -: Mauvais descripteur de fichier\n"
-stdout: ''

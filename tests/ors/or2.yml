@@ -10,6 +10,8 @@
 
   echo
 
+  export
+
   install.sh
 
   multiples
@@ -53,6 +55,8 @@ stdout: '42sh
   commands
 
   echo
+
+  export
 
   install.sh
 
