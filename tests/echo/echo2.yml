@@ -1,7 +1,19 @@
 42exit_code: 0
 42stderr: ''
+<<<<<<< HEAD
 42stdout: "\n\tok\n"
+=======
+42stdout: '''ok''
+
+  '
+>>>>>>> 601d14b4577def15a6c9a2a3f5c38bfc902c7c2a
 exit_code: 0
 input: echo -e "ok\n\t"
 stderr: ''
+<<<<<<< HEAD
 stdout: "ok\n\t\n"
+=======
+stdout: 'ok
+
+  '
+>>>>>>> 601d14b4577def15a6c9a2a3f5c38bfc902c7c2a

@@ -18,15 +18,15 @@ int init_environment(void)
           return 1;
         name = strncpy(name, environ[index], i);
         value = strncpy(value, environ[index] + i + 1, strlen(environ[index]) - i - 1);
-        add_word(ENV_VAR, name, value);
+        add_word(ENV_VAR, NULL, name, value);
         break;
       }
     }
     index++;
   }
-  add_word(ENV_VAR, "_", "/usr/bin/make");
-  add_word(ENV_VAR, "OLDPWD", "");
-  add_word(ENV_VAR, "SHLVL", "2");
+  add_word(ENV_VAR, NULL, "_", "/usr/bin/make");
+  add_word(ENV_VAR, NULL, "OLDPWD", "");
+  add_word(ENV_VAR, NULL, "SHLVL", "2");
 
   return 0;
 }

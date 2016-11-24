@@ -1,11 +1,21 @@
 42exit_code: 0
 42stderr: ''
 42stdout: "42sh\naide.py\nands\ncommands\necho\nexport\ninstall.sh\nmultiples\nors\n\
+<<<<<<< HEAD
   requirements.txt\nt1.py\ntest8.yml\ntestfor\ntestif\ntestnonvalid\ntestpipe\ntests.py\n\
   testsuite.py\ntestvalid\nwhile\n     20      20     172\n"
+=======
+  requirements.txt\nt1.py\ntest8.yml\ntestfor\ntestfunction\ntestif\ntestnonvalid\n\
+  testpipe\ntests.py\ntestsuite.py\ntestvalid\nwhile\n     21      21     185\n"
+>>>>>>> 601d14b4577def15a6c9a2a3f5c38bfc902c7c2a
 exit_code: 0
 input: ls && ls | wc
 stderr: ''
 stdout: "42sh\naide.py\nands\ncommands\necho\nexport\ninstall.sh\nmultiples\nors\n\
+<<<<<<< HEAD
   requirements.txt\nt1.py\ntest8.yml\ntestfor\ntestif\ntestnonvalid\ntestpipe\ntests.py\n\
   testsuite.py\ntestvalid\nwhile\n     20      20     172\n"
+=======
+  requirements.txt\nt1.py\ntest8.yml\ntestfor\ntestfunction\ntestif\ntestnonvalid\n\
+  testpipe\ntests.py\ntestsuite.py\ntestvalid\nwhile\n     21      21     185\n"
+>>>>>>> 601d14b4577def15a6c9a2a3f5c38bfc902c7c2a

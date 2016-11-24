@@ -26,6 +26,8 @@
 
   testfor
 
+  testfunction
+
   testif
 
   testnonvalid
@@ -69,6 +71,8 @@ stdout: '42sh
   test8.yml
 
   testfor
+
+  testfunction
 
   testif
 

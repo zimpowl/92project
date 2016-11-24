@@ -1,0 +1,15 @@
+42exit_code: 0
+42stderr: ''
+42stdout: 'salut
+
+  bonjour
+
+  '
+exit_code: 0
+input: function hello() (echo bonjour;); if echo salut; then hello; fi
+stderr: ''
+stdout: 'salut
+
+  bonjour
+
+  '

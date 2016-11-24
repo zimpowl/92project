@@ -50,7 +50,7 @@ int add_assign(char *arg, int i)
   char *value = malloc(sizeof (char) * (strlen(arg) - i));
   name = strncpy(name, arg, i);
   value = strncpy(value, arg + i + 1,  (strlen(arg) - i - 1));
-  add_word(ENV_VAR, name, value);
+  add_word(ENV_VAR, NULL, name, value);
   setenv(name, value, 1);
   return 0;
 }

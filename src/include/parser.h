@@ -124,10 +124,10 @@ struct ntree *rule_forin_p(struct ntree *ntree);
  */
 struct ntree *func_p(void);
 /**
- * @fn struct ntree *func_bis_p(void)
+ * @fn void func_bis_p(void)
  * @return return the new tree
  */
-struct ntree *func_bis_p(void);
+void func_bis_p(void);
 /**
  * @fn struct ntree *func_bisbis_p(struct ntree *ntree)
  * @return return the new tree

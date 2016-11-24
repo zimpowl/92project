@@ -190,17 +190,53 @@ struct ntree *rule_forin_p(struct ntree *ntree)
 
 struct ntree *rule_caseclause_p(struct ntree *ntree)
 {
+  struct ntree *new = rule_caseitem_p();
+  ntree = add_ntree(
+  char *token = take_token();
   
+  do
+  {
+    if (strcmp(token, ";;") == 0)
+    {
+      valid_token();
+      skip_line();
+      
+    }
+  }
 }
 
-struct ntree *rule_caseitem_p(struct ntree *ntree)
+struct ntree *rule_caseitem_p()
 {
-  struct ntree *new = NULL;
+  struct ntree *ntree = new_ntree("case_item", RESERVED_WORD);
   char *token = take_token();
   if (token && strcmp(token, "(") == 0)
   {
-    new = new_ntree(token, RESERVED_WORD);
-    ntree = add_ntree(ntree, new);
-
+    valid_token();
+    token = take_token();
   }
+  
+  struct ntree *new = new_ntree(token, WORD);
+  ntree = add_ntree(ntree, new);
+  
+  token = take_token();
+  while (token && strcmp(token, "|") != 0)
+  {
+    valid_token();
+    token = take_token();
+    if (!token)
+      return NULL;
+    valid_token();
+    new = new_ntree(token, WORD);
+    ntree = add_ntree(ntree, new);
+    token = take_token();
+  }
+
+  if (token && strcmp(token, ")") != 0)
+    return NULL;
+
+  valid_token();
+  skip_line();
+  new = compound_list_a();
+  ntree = add_ntree(ntree, new);
+  return ntree;
 }*/

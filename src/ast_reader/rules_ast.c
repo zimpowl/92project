@@ -57,7 +57,7 @@ int rule_for_a(struct ntree *ntree)
   int i = 2;
   for (; ntree->sons[i]->token != LIST; i++)
   {
-    if (add_word(0, ntree->sons[0]->name, ntree->sons[i]->name))
+    if (add_word(VAR, NULL,ntree->sons[0]->name, ntree->sons[i]->name))
       do_group_a(ntree->sons[ntree->size-1]);
   }
   return 0;

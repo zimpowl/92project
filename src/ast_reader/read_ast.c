@@ -22,12 +22,12 @@ int manage_a(struct ntree *ntree)
     i = and_or_a(ntree);
   else if (ntree->token == COMMAND)
     i = command_a(ntree);
-  //else if (ntree->token == ASSIGNMENT_WORD)
-    //i = assign_a(ntree);
   else if (ntree->token == RESERVED_WORD)
     i = rules_a(ntree);
   else if (ntree->token == PIPELINE)
     i = pipeline_a(ntree);
+  else if (ntree->token == FUNCTION)
+    i = reg_func_a(ntree);
   return i;
 }
 
@@ -90,7 +90,7 @@ int check_assign_a(struct ntree *ntree)
     return -1;
   char *name = strtok(str, "=");
   char *value = strtok(NULL, "\0");
-  int res = add_word(0, name, value);
+  int res = add_word(VAR, NULL, name, value);
   if (res == 1)
     return 0;
   else return 1;
@@ -116,21 +116,16 @@ int check_condition_a(struct ntree *ntree)
         return 0;
       return 1;
     }
-    
-    /*else if (str[i] == '!' && str[i+1] 
-        && str[i+1] == '=' && str[i+2] 
-          && str[i+2] != '=')
-    {
-      char *name = strtok(str, "!=");
-      char *value = strtok(NULL, "=");
-      struct word *w = search_word(name);
-      printf("%s\n", value);
-      if (!w)
-        return -1;
-      if (strcmp(w->value, value) == 0)
-        return 1;
-      return 0;
-    }*/
+  }
+  return -1;
+}
+
+int check_func_a(char *name)
+{
+  struct word *w = search_word(name);
+  if (w && w->token == FUNCTION)
+  {
+    return manage_a(w->ntree);
   }
   return -1;
 }
@@ -148,6 +143,7 @@ char *var_assigned_a(char *name)
   return w->value;
 }
 
+
 int command_a(struct ntree *ntree)
 {
   int res = check_assign_a(ntree);
@@ -157,7 +153,11 @@ int command_a(struct ntree *ntree)
   res = check_condition_a(ntree);
   if (res != -1)
     return res;
-  
+
+  res = check_func_a(ntree->name);
+  if (res != -1)
+    return res;
+
   char *command[ntree->size + 2];
   command[0] = ntree->name;
   for (unsigned i = 0; i < ntree->size; i++)
