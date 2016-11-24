@@ -30,4 +30,6 @@ int exec_pipe(char **args[]);
  * @brief
  */
 int my_echo(char *args[]);
+
+int my_export(char **args);
 #endif

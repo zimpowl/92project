@@ -1,5 +1,4 @@
 #include "include/42sh.h"
-
 static int command(char *s)
 {
   init_lexer(s);
@@ -46,21 +45,30 @@ static int ast_print(char *s)
   return 1;
 }
 
+//allow to destroy the btree first
+//can be used too for the CTRL-Z anf CTRL-C keys
+int end(int res)
+{
+  destroy_words();
+  return res;
+}
+
 int main(int argc, char *argv[])
 {
+  init_environment();
   if (argc == 1)
-    return 0;
+    return end(0);
   if (!strcmp(argv[1], "-c"))
-    return command_mode(argc, argv);
+    return end(command_mode(argc, argv));
   if (!strcmp(argv[1], "--ast-print"))
-    return ast_print(argv[2]);
+    return end(ast_print(argv[2]));
   if (!strcmp(argv[1], "--norc"))
-    return 0;
+    return end(0);
   if (!fnmatch("--v*", argv[1], 0))
   {
     printf("Version 0.8\n");
-    return 0;
+    return end(0);
   }
   else
-    return script_mode(argv[1]);
+    return end(script_mode(argv[1]));
 }

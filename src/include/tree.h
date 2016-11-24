@@ -10,6 +10,7 @@
  */
 
 
+extern char **environ;
 
 /**
  * @enum token_parser
@@ -78,6 +79,8 @@ struct file
 };
 
 
+//initialize the binary tree with variables
+int init_environment(void);
 
 //if sucess to add word return 1 else return 0
 int add_word(enum token_parser token, char *name, char *value);
@@ -87,6 +90,9 @@ void delete_word(char *name);
 
 //return the struct word associated to the name or NULL if not found
 struct word *search_word(char *name);
+
+//delete the global big_btree
+void destroy_words(void);
 
 //print all word found on the terminal
 void print_words(void);
@@ -156,17 +162,8 @@ void create_dot(struct ntree *ntree);
 int print_ast(FILE *fd, struct ntree *tree, int r);
 
 
-//initialize the binary tree with variables
-int init_env(void);
-/*struct btree
-{
-  struct btree *left;
-  struct btree *right;
-  char *name;
-  char *value;
-};
 
-struct btree *add_btree(struct btree *tree, char *name, enum token_parser tok);
+/*struct btree *add_btree(struct btree *tree, char *name, enum token_parser tok);
 struct btree *search_btree(struct btree * tree, char *name);
 struct btree *delete_btree(struct btree *tree, char *name);
 

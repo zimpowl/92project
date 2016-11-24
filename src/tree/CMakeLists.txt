@@ -1,4 +1,5 @@
 set(SRC
+  environment.c
   assignment.c  
   ntree.c)
 

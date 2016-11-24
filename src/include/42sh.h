@@ -7,8 +7,8 @@
 #include <fnmatch.h>
 #include <err.h>
 
+#include "tree.h"
 #include "executor.h"
 #include "parser.h"
 #include "ast_reader.h"
 #include "lexer.h"
-#include "tree.h"
