@@ -28,6 +28,8 @@ stdout: '42sh
 
   testfor
 
+  testfunction
+
   testif
 
   testnonvalid

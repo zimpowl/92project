@@ -103,6 +103,18 @@ int rule_for_a(struct ntree *ntree);
  */
 int rule_until_a(struct ntree *ntree);
 /**
+ * @fn int reg_func_a(struct ntree *ntree);
+ * @param ntree 
+ * @return return the value.
+ */
+int reg_func_a(struct ntree *ntree);
+/**
+ * @fn int reg_func_a(struct ntree *ntree);
+ * @param ntree 
+ * @return return the value.
+ */
+int check_func_a(char *name);
+/**
  * @fn int do_group_a(struct ntree *ntree)
  * @param ntree 
  * @return return the value.

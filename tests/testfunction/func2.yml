@@ -1,0 +1,11 @@
+42exit_code: 0
+42stderr: ''
+42stdout: 'hello word
+
+  '
+exit_code: 0
+input: hello() ( echo hello word; ); hello
+stderr: ''
+stdout: 'hello word
+
+  '

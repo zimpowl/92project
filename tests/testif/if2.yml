@@ -24,6 +24,8 @@
 
   testfor
 
+  testfunction
+
   testif
 
   testnonvalid
@@ -61,6 +63,8 @@
   test8.yml
 
   testfor
+
+  testfunction
 
   testif
 
@@ -106,6 +110,8 @@ stdout: '42sh
 
   testfor
 
+  testfunction
+
   testif
 
   testnonvalid
@@ -143,6 +149,8 @@ stdout: '42sh
   test8.yml
 
   testfor
+
+  testfunction
 
   testif
 

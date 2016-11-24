@@ -50,6 +50,7 @@ struct ntree
 
 struct word
 {
+  struct ntree *ntree;
   enum token_parser token;
   char *name;
   char *value;
@@ -80,7 +81,8 @@ struct file
 
 
 //if sucess to add word return 1 else return 0
-int add_word(enum token_parser token, char *name, char *value);
+int add_word(enum token_parser token, struct ntree *ntree, 
+    char *name, char *value);
 
 //delete word from name, do nothing if not found
 void delete_word(char *name);
