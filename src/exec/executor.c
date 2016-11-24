@@ -25,6 +25,8 @@ int exec(char *args[])
 {
   if (!strcmp(args[0], "echo"))
     return my_echo(args);
+  else if (!strcmp(args[0], "export"))
+    return my_export(args);
   else
     return exec_builtin(args);
 }

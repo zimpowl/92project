@@ -45,8 +45,8 @@ def start_test(category):
       commands.insert(0, "valgrind")
 
     try:
-      commands1 = ["./42sh", "-c", conf['input'] ]
-      commands2 = ["bash", "--posix", "-c", conf['input'] ]
+      commands1 = ["bash", "--posix", "-c", conf['input'] ]
+      commands2 = ["./42sh", "-c", conf['input'] ]
 
       sp1 = subprocess.run(commands1, stderr = subprocess.PIPE, stdout = subprocess.PIPE)
       err1 = sp1.stderr.decode('utf-8')
@@ -105,6 +105,7 @@ def timeout(timer):
 
 if parsed.list:
   print("commands")
+  print("export")
   print("ands")
   print("ors")
   print("testpipe")
@@ -140,4 +141,5 @@ else:
   start_test("testfor")
   start_test("testif")
   start_test("testfunction")
+  start_test("export")
   exit(0)
