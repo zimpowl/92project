@@ -4,8 +4,8 @@
 
   '
 exit_code: 0
-input: echo $a
+input: echo $a$b$c
 stderr: ''
-stdout: '$a
+stdout: '
 
   '

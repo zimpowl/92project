@@ -120,7 +120,7 @@ stdout: '42sh
 
   while
 
-  42sh
+  ok42sh
 
   aide.py
 
@@ -158,6 +158,5 @@ stdout: '42sh
 
   while
 
-  ok
 
   '

@@ -4,6 +4,8 @@
 exit_code: 0
 input: echo -e "bla bla \e\\\n"
 stderr: ''
-stdout: '"bla bla \e\\\n"1
+stdout: '
+
+  bla bla \1
 
   '

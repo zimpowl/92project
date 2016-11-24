@@ -1,11 +1,7 @@
 42exit_code: 0
 42stderr: ''
-42stdout: 'okokok
-
-  '
+42stdout: okokok okokok
 exit_code: 0
-input: echo ok'ok'ok
+input: echo -n ok'ok'ok ok"ok"ok
 stderr: ''
-stdout: 'okokok
-
-  '
+stdout: okokok okokok

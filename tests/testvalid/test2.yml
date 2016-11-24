@@ -1,16 +1,10 @@
 42exit_code: 1
 42stderr: "bash: -c: ligne 1: erreur de syntaxe : fin de fichier pr\xE9matur\xE9e\n"
 42stdout: ''
-exit_code: 127
+exit_code: -11
 input: (echo true || echo polo && echo false) && (! echo dany && echo lea || (echo
 stderr: ''
 stdout: 'true
-
-  false
-
-  dany
-
-  true
 
   false
 

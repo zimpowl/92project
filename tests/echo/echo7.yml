@@ -6,6 +6,6 @@
 exit_code: 0
 input: echo "\net\t"
 stderr: ''
-stdout: '"\net\t"
+stdout: '\net\t
 
   '

@@ -6,6 +6,6 @@
 exit_code: 0
 input: echo -e \nok\n
 stderr: ''
-stdout: '\nok\n
+stdout: 'nokn
 
   '
