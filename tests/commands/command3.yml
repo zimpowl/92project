@@ -1,8 +1,6 @@
 42exit_code: 0
 42stderr: ''
-42stdout: 'AUTHORS
-
-  build
+42stdout: 'build
 
   CMakeLists.txt
 
@@ -20,9 +18,7 @@
 exit_code: 0
 input: ls ..
 stderr: ''
-stdout: 'AUTHORS
-
-  build
+stdout: 'build
 
   CMakeLists.txt
 

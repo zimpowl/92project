@@ -33,6 +33,45 @@ static int script_mode(char *name)
   return command(line);
 }
 
+static int interactive_rec(void)
+{
+  char line[256];
+  line[0] = '\0';
+  char buf[1];
+  buf[0] = ' ';
+  int res = 0;
+  printf("42sh$ ");
+  fflush(NULL);
+  while (read(1, buf, 1) > 0 && buf[0] != '\n' && strcmp(line, "exit"))
+  {
+    sprintf(line, "%s%c", line, buf[0]);
+    buf[0] = ' ';
+    fflush(NULL);
+  }
+  if (!strcmp(line, "exit"))
+    return res;
+  res = command(line);
+  return interactive_rec();
+
+}
+
+static int interactive_mode(void)
+{
+  if (isatty(0))
+    return interactive_rec();
+  char line[256];
+  line[0] = '\0';
+  char buf[1];
+  buf[0] = ' ';
+  while (read(0, buf, 1) > 0)
+  {
+    sprintf(line, "%s%c", line, buf[0]);
+    buf[0] = ' ';
+    fflush(NULL);
+  }
+  return command(line);
+}
+
 static int ast_print(char *s)
 {
   if (!s)
@@ -57,7 +96,7 @@ int main(int argc, char *argv[])
 {
   init_environment();
   if (argc == 1)
-    return end(0);
+    return end(interactive_mode());
   if (!strcmp(argv[1], "-c"))
     return end(command_mode(argc, argv));
   if (!strcmp(argv[1], "--ast-print"))

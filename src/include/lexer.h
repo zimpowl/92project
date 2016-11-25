@@ -23,3 +23,8 @@ void valid_token(void);
  * @return next token
  */
 char *take_next_token(void);
+
+/****** string.c (fct for echo) ******/
+char *append(char *s, char c);
+char *my_delete(char *s, int i);
+char *my_insert(char *s1, char *s2, int n);

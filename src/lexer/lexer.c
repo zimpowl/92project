@@ -38,7 +38,7 @@ void init_lexer(char *s)
   size_t len = strlen(s);
   if (!len)
     return;
-  g_line = malloc(len * sizeof (char));
+  g_line = malloc((len + 1) * sizeof (char));
   if (!g_line)
     return;
   s[len] = '\0';

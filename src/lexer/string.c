@@ -3,7 +3,7 @@
 char *append(char *s, char c)
 {
   size_t len = strlen(s);
-  char *res = malloc((len + 1) * sizeof (char));
+  char *res = malloc((len + 2) * sizeof (char));
   if (!res)
     return NULL;
   res[0] = '\0';
@@ -18,7 +18,7 @@ char *my_insert(char *s1, char *s2, int n)
   if (!strlen(s1))
     return s2;
   int len = strlen(s1) + strlen(s2);
-  char *res = malloc(len * sizeof (char));
+  char *res = malloc((len + 1)* sizeof (char));
   if (!res)
     return NULL;
   int i = 0;
@@ -38,7 +38,7 @@ char *my_insert(char *s1, char *s2, int n)
 char *my_delete(char *s, int n)
 {
   int len = strlen(s);
-  char *res = malloc((len - 1) * sizeof (char));
+  char *res = malloc(len * sizeof (char));
   if (!res)
     return NULL;
   int i = 0;

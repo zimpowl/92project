@@ -21,7 +21,8 @@ static int is_operator2(const char *s)
 {
   return !(strcmp(s, "&&") && strcmp(s, ";;") && strcmp(s, "<<") 
            && strcmp(s, ">>") && strcmp(s, "<&") && strcmp(s, ">&") 
-           && strcmp(s, "<>") && strcmp(s, ">|") && strcmp(s, "||"));
+           && strcmp(s, "<>") && strcmp(s, ">|") && strcmp(s, "||")
+           && strcmp(s, "$(") && strcmp(s, "${"));
 }
 
 static int is_operator3(const char *s)

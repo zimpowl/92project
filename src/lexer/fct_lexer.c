@@ -23,7 +23,7 @@ struct token init_token(size_t i)
   tok.type = take_type("", g_line[i], WORD);
   if (g_line[i] != '\0')
   {
-    tok.s = malloc(sizeof (char));
+    tok.s = malloc(2 * sizeof (char));
     if (tok.s)
     {
       tok.s[0] = g_line[i];
@@ -86,20 +86,17 @@ struct list_token *take_1_token(size_t i)
   do
   {
     cont = is_continue(my_list->token, i);
-    if ((g_line[i] == ' ' || g_line[i] == '\t' || g_line[i] == '\0') 
+    if ((g_line[i] == ' ' || g_line[i] == '\t' /*|| g_line[i] == '\0'*/) 
          && my_list->token.type != WORD_QUOTED 
          && my_list->token.type != WORD_DQUOTED)
       i++;
     if (cont)
     {
-    // enum type_token prev_type = my_list->token.type;
       my_list->token = new_token(my_list->token, i);
-    //  check_delete(prev_type, my_list);
       i++;
     }
   } while (cont);
 
-  //check_delete_end(my_list);
   my_list->i = i;
   return my_list;
 }

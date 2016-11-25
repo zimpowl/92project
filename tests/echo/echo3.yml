@@ -1,10 +1,10 @@
 42exit_code: 0
 42stderr: ''
-42stdout: '$a
+42stdout: '
 
   '
 exit_code: 0
-input: echo $a
+input: echo $a$b$c
 stderr: ''
 stdout: '
 
