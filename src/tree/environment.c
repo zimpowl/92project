@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <../include/tree.h>
+#include "../include/tree.h"
 
 int setenv(const char *name, const char *value, int overwrite);
 int init_environment(void)
@@ -27,6 +27,7 @@ int init_environment(void)
   add_word(ENV_VAR, NULL, "_", "/usr/bin/make");
   add_word(ENV_VAR, NULL, "OLDPWD", "");
   add_word(ENV_VAR, NULL, "SHLVL", "2");
+  setenv("OLDPWD", "", 1);
 
   add_word(VAR, NULL, "PS1", "42sh$ ");
   add_word(VAR, NULL, "PS2", "> ");
