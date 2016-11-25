@@ -32,4 +32,7 @@ int exec_pipe(char **args[]);
 int my_echo(char *args[]);
 
 int my_export(char **args);
+
+
+int my_cd(char **args);
 #endif

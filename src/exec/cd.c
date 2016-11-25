@@ -5,6 +5,7 @@
 #include <string.h>
 #include <sys/stat.h>
 #include "../include/tree.h"
+#include "../include/executor.h"
 
 int setenv(const char *name, const char *value, int overwrite);
 int lstat(const char *restrict path, struct stat *restrict buf);
@@ -30,6 +31,7 @@ int change_cd(char *res)
   pwd->value = res;
   setenv("PWD", pwd->value, 1);
   chdir(res);
+  //printf("pwd: %s\n", pwd->value);
   return 0;
 }
 
@@ -145,7 +147,7 @@ int my_cd(char **args)
   return 0;
 }
 
-int main(void)
+/*int main(void)
 {
   init_environment();
   char *argv[2];
@@ -164,4 +166,4 @@ int main(void)
   printf("OLDPWD: %s\n", getenv("OLDPWD"));
   destroy_words();
   return res;
-}
+}*/
