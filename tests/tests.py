@@ -115,6 +115,7 @@ if parsed.list:
   print("testvalid")
   print("testfor")
   print("testif")
+  print("testcase")
   print("testfunction")
   exit(0)
 
@@ -140,6 +141,7 @@ else:
   start_test("testvalid")
   start_test("testfor")
   start_test("testif")
+  start_test("testcase")
   start_test("testfunction")
   start_test("export")
   exit(0)

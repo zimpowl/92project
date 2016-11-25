@@ -10,8 +10,6 @@ stdout: 'bin
 
   cdrom
 
-  core
-
   dev
 
   etc
@@ -23,8 +21,6 @@ stdout: 'bin
   initrd.img.old
 
   lib
-
-  lib32
 
   lib64
 
@@ -57,5 +53,7 @@ stdout: 'bin
   var
 
   vmlinuz
+
+  vmlinuz.old
 
   '

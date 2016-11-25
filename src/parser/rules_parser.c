@@ -121,6 +121,7 @@ struct ntree *rule_for_p(void)
   ntree = rule_forin_p(ntree);
   if (!ntree)
     return NULL;
+  skip_line();
   new = do_group_p();
   if (!new)
     return NULL;
@@ -148,15 +149,16 @@ struct ntree *rule_forin_p(struct ntree *ntree)
   new = new_ntree(token, RESERVED_WORD);
   ntree = add_ntree(ntree, new);
 
-  while (check_operators_p() == 0)
+  token = take_token();
+
+  while (token && strcmp(token, ";") != 0 && strcmp(token, "\n") != 0)
   {
-    token = take_token();
     valid_token();
     new = new_ntree(token, WORD);
     ntree = add_ntree(ntree, new);
+    token = take_token();
   }
-  token = take_token();
-  if (!token || (strcmp(token, ";") != 0 && strcmp(token, "\n") != 0))
+  if (!token)
     return NULL;
   valid_token();
   new = new_ntree(token, LIST);
@@ -164,7 +166,7 @@ struct ntree *rule_forin_p(struct ntree *ntree)
   return ntree;
 }
 
-/*struct ntree *rule_case_p()
+struct ntree *rule_case_p()
 {
   char *token = take_token();
   if (!token || strcmp(token, "case") != 0)
@@ -191,35 +193,48 @@ struct ntree *rule_forin_p(struct ntree *ntree)
 struct ntree *rule_caseclause_p(struct ntree *ntree)
 {
   struct ntree *new = rule_caseitem_p();
-  ntree = add_ntree(
+  ntree = add_ntree(ntree, new);
   char *token = take_token();
   
-  do
+  while (strcmp(token, ";;") == 0)
   {
-    if (strcmp(token, ";;") == 0)
-    {
-      valid_token();
-      skip_line();
-      
-    }
+    valid_token();
+    skip_line();
+    
+    new = rule_caseitem_p();
+    ntree = add_ntree(ntree, new);
+    token = take_token();
   }
+  skip_line();
+
+  token = take_token();
+  if (strcmp(token, "esac") != 0)
+    return NULL;
+  new = new_ntree(token, RESERVED_WORD);
+  ntree = add_ntree(ntree, new);
+  valid_token();
+  return ntree;
 }
 
 struct ntree *rule_caseitem_p()
 {
-  struct ntree *ntree = new_ntree("case_item", RESERVED_WORD);
   char *token = take_token();
-  if (token && strcmp(token, "(") == 0)
-  {
+
+  if (!token || strcmp(token, "esac") == 0)    
+    return NULL;
+  if (strcmp(token, "(") == 0)
     valid_token();
-    token = take_token();
-  }
-  
+  token = take_token();
+  if (!token)
+    return NULL;
+
+  valid_token();
+  struct ntree *ntree = new_ntree("case_item", RESERVED_WORD);
   struct ntree *new = new_ntree(token, WORD);
   ntree = add_ntree(ntree, new);
   
   token = take_token();
-  while (token && strcmp(token, "|") != 0)
+  while (token && strcmp(token, "|") == 0)
   {
     valid_token();
     token = take_token();
@@ -231,12 +246,12 @@ struct ntree *rule_caseitem_p()
     token = take_token();
   }
 
-  if (token && strcmp(token, ")") != 0)
+  if (!token || strcmp(token, ")") != 0)
     return NULL;
 
   valid_token();
   skip_line();
-  new = compound_list_a();
+  new = compound_list_p();
   ntree = add_ntree(ntree, new);
   return ntree;
-}*/
+}

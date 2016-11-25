@@ -31,11 +31,6 @@ int manage_a(struct ntree *ntree)
   return i;
 }
 
-/*int assign_a(struct ntree *ntree)
-{
-  return add_word(ntree->token, ntree->sons[0], ntree->sons[1]);
-}*/
-
 int list_a(struct ntree *ntree)
 {
   int i = 0;
@@ -43,11 +38,12 @@ int list_a(struct ntree *ntree)
   if (strcmp(ntree->name, ";") == 0 || strcmp(ntree->name, "&") == 0)
   {
     i = manage_a(ntree->sons[0]);
-    j = manage_a(ntree->sons[1]);
-    if (i == 0 || j == 0)
+    if (ntree->size > 1)
+      j = manage_a(ntree->sons[1]);
+    if (i == 0 && j == 0)
       return 0;
   }
-  return j;
+  return i;
 }
 
 int and_or_a(struct ntree *ntree)

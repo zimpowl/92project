@@ -24,6 +24,8 @@
 
   test8.yml
 
+  testcase
+
   testfor
 
   testfunction
@@ -65,6 +67,8 @@
   t1.py
 
   test8.yml
+
+  testcase
 
   testfor
 
@@ -112,6 +116,8 @@ stdout: '42sh
 
   test8.yml
 
+  testcase
+
   testfor
 
   testfunction
@@ -153,6 +159,8 @@ stdout: '42sh
   t1.py
 
   test8.yml
+
+  testcase
 
   testfor
 

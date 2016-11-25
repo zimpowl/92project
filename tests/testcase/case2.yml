@@ -1,0 +1,11 @@
+42exit_code: 0
+42stderr: ''
+42stdout: 'hey
+
+  '
+exit_code: 0
+input: case hey in hello) echo hello;; hey) echo hey;; esac
+stderr: ''
+stdout: 'hey
+
+  '

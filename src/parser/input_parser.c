@@ -7,7 +7,7 @@ int skip_line(void)
   do
   {
     char *token = take_token();
-    if (strcmp(token, "\n") == 0)
+    if (token && strcmp(token, "\n") == 0)
     {
       valid_token();
       i++;
@@ -33,7 +33,8 @@ int check_operators_p(void)
         || strcmp(token, ">|") == 0 || strcmp(token, "<<") == 0
         || strcmp(token, "(") == 0 || strcmp(token, ")") == 0
         || strcmp(token, "{") == 0 || strcmp(token, "}") == 0
-        || strcmp(token, ">>") == 0 || strcmp(token, "|") == 0)
+        || strcmp(token, ">>") == 0 || strcmp(token, "|") == 0
+        || strcmp(token, ";;") == 0 || strcmp(token, "\n") == 0)
     return 1;
   else
     return 0;
