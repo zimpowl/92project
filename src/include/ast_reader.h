@@ -17,6 +17,12 @@
  */
 int read_a(struct ntree *ntree);
 /**
+ * @fn int read_a(struct ntree *ntree)
+ * @param  ntree
+ * @return return the value
+ */
+void free_ast(struct ntree *ntree);
+/**
  * @fn int manage_a(struct ntree *ntree)
  * @param ntree
  * @return return the value.

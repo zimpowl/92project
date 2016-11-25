@@ -28,5 +28,7 @@ int init_environment(void)
   add_word(ENV_VAR, NULL, "OLDPWD", "");
   add_word(ENV_VAR, NULL, "SHLVL", "2");
 
+  add_word(VAR, NULL, "PS1", "42sh$ ");
+  add_word(VAR, NULL, "PS2", "> ");
   return 0;
 }

@@ -76,7 +76,15 @@
 
   export VTE_VERSION="4205"
 
+<<<<<<< HEAD
   export WINDOWID="20971675"
+=======
+<<<<<<< HEAD
+  export WINDOWID="20984046"
+=======
+  export WINDOWID="25166057"
+>>>>>>> 4b97828e16023c561699612fe3d2b7eabec5fbca
+>>>>>>> acb9fdab94b0a2ee68260a861212105514c57637
 
   export XAUTHORITY="/home/zimpo/.Xauthority"
 
@@ -188,7 +196,15 @@ stdout: 'export CLUTTER_IM_MODULE="xim"
 
   export VTE_VERSION="4205"
 
+<<<<<<< HEAD
   export WINDOWID="20971675"
+=======
+<<<<<<< HEAD
+  export WINDOWID="20984046"
+=======
+  export WINDOWID="25166057"
+>>>>>>> 4b97828e16023c561699612fe3d2b7eabec5fbca
+>>>>>>> acb9fdab94b0a2ee68260a861212105514c57637
 
   export XAUTHORITY="/home/zimpo/.Xauthority"
 
