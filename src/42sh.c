@@ -40,7 +40,8 @@ static int interactive_rec(void)
   char buf[1];
   buf[0] = ' ';
   int res = 0;
-  printf("42sh$ ");
+  struct word *w = search_word("PS1");
+  printf("%s", w->value);
   fflush(NULL);
   while (read(1, buf, 1) > 0 && buf[0] != '\n' && strcmp(line, "exit"))
   {
@@ -105,7 +106,7 @@ int main(int argc, char *argv[])
     return end(0);
   if (!fnmatch("--v*", argv[1], 0))
   {
-    printf("Version 0.8\n");
+    printf("Version 0.9\n");
     return end(0);
   }
   else

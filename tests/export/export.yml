@@ -68,7 +68,7 @@
 
   export VTE_VERSION="4205"
 
-  export WINDOWID="20972298"
+  export WINDOWID="20984046"
 
   export XAUTHORITY="/home/lea/.Xauthority"
 
@@ -170,7 +170,7 @@ stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-ZYnETvo2X7,gui
 
   export VTE_VERSION="4205"
 
-  export WINDOWID="20972298"
+  export WINDOWID="20984046"
 
   export XAUTHORITY="/home/lea/.Xauthority"
 
