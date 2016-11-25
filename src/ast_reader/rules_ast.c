@@ -15,6 +15,8 @@ int rules_a(struct ntree *ntree)
     return rule_until_a(ntree);
   if (strcmp(ntree->name, "for") == 0)
     return rule_for_a(ntree);
+  if (strcmp(ntree->name, "case") == 0)
+    return rule_case_a(ntree);
   return 1;
 }
 
@@ -29,8 +31,6 @@ int rule_if_a(struct ntree *ntree)
       res = manage_a(ntree->sons[3]->sons[0]);
     return res;
 }
-
-
 
 int rule_while_a(struct ntree *ntree)
 {
@@ -61,6 +61,29 @@ int rule_for_a(struct ntree *ntree)
       do_group_a(ntree->sons[ntree->size-1]);
   }
   return 0;
+}
+
+int rule_case_a(struct ntree *ntree)
+{
+  for (int i = 2; strcmp(ntree->sons[i]->name, "esac") != 0; i++)
+  {
+    int res = rule_caseitem_a(ntree->sons[i], ntree->sons[0]->name);
+    if (res != -1)
+      return res;
+  }
+  return 0;
+}
+
+int rule_caseitem_a(struct ntree *ntree, char *str)
+{
+  for (unsigned i = 0; i < ntree->size - 1; i++)
+  {
+    char *name = var_assigned_a(ntree->sons[i]->name);
+    char *value = var_assigned_a(str);
+    if (strcmp(name, value) == 0)
+      return manage_a(ntree->sons[ntree->size-1]);
+  }
+  return -1;
 }
 
 int do_group_a(struct ntree *ntree)

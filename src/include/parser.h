@@ -133,6 +133,24 @@ void func_bis_p(void);
  * @return return the new tree
  */
 struct ntree *func_bisbis_p(struct ntree *ntree);
+/**
+ * @fn struct ntree *rule_case_p();
+ * @param ntree 
+ * @return return the value.
+ */
+struct ntree *rule_case_p();
+/**
+ * @fn struct ntree *rule_case_p();
+ * @param ntree 
+ * @return return the value.
+ */
+struct ntree *rule_caseclause_p(struct ntree *ntree);
+/**
+ * @fn struct ntree *rule_case_p();
+ * @param ntree 
+ * @return return the value.
+ */
+struct ntree *rule_caseitem_p();
 //redir_parser.c
 /**
  * @fn struct ntree *redir_p(void)

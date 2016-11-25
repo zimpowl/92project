@@ -119,6 +119,18 @@ int check_func_a(char *name);
  * @param ntree 
  * @return return the value.
  */
+int rule_case_a(struct ntree *ntree);
+/**
+ * @fn int do_group_a(struct ntree *ntree)
+ * @param ntree 
+ * @return return the value.
+ */
+int rule_caseitem_a(struct ntree *ntree, char *str);
+/**
+ * @fn int do_group_a(struct ntree *ntree)
+ * @param ntree 
+ * @return return the value.
+ */
 int do_group_a(struct ntree *ntree);
 
 #endif

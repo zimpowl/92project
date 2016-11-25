@@ -33,7 +33,8 @@ int check_operators_p(void)
         || strcmp(token, ">|") == 0 || strcmp(token, "<<") == 0
         || strcmp(token, "(") == 0 || strcmp(token, ")") == 0
         || strcmp(token, "{") == 0 || strcmp(token, "}") == 0
-        || strcmp(token, ">>") == 0 || strcmp(token, "|") == 0)
+        || strcmp(token, ">>") == 0 || strcmp(token, "|") == 0
+        || strcmp(token, ";;") == 0)
     return 1;
   else
     return 0;

@@ -1,0 +1,11 @@
+42exit_code: 0
+42stderr: ''
+42stdout: '5
+
+  '
+exit_code: 0
+input: i=5; case $i in 1) echo $i;; 3) echo $i;; 5) echo $i;; esac
+stderr: ''
+stdout: '5
+
+  '

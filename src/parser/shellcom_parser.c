@@ -15,6 +15,10 @@ struct ntree *shell_command_p(void)
   if (new)
     return new;
 
+  new = rule_case_p();
+  if (new)
+    return new;
+  
   new = shell_commandbis_p();
   return new;
 }
