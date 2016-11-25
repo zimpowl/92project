@@ -40,7 +40,7 @@ int list_a(struct ntree *ntree)
     i = manage_a(ntree->sons[0]);
     if (ntree->size > 1)
       j = manage_a(ntree->sons[1]);
-    if (i == 0 || j == 0)
+    if (i == 0 && j == 0)
       return 0;
   }
   return i;

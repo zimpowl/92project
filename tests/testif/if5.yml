@@ -1,8 +1,10 @@
-42exit_code: 0
+42exit_code: 1
 42stderr: ''
 42stdout: 'true
 
   true
+
+  true false
 
   '
 exit_code: 1
