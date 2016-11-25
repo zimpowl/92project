@@ -121,6 +121,7 @@ struct ntree *rule_for_p(void)
   ntree = rule_forin_p(ntree);
   if (!ntree)
     return NULL;
+  skip_line();
   new = do_group_p();
   if (!new)
     return NULL;
@@ -148,15 +149,16 @@ struct ntree *rule_forin_p(struct ntree *ntree)
   new = new_ntree(token, RESERVED_WORD);
   ntree = add_ntree(ntree, new);
 
-  while (check_operators_p() == 0)
+  token = take_token();
+
+  while (token && strcmp(token, ";") != 0 && strcmp(token, "\n") != 0)
   {
-    token = take_token();
     valid_token();
     new = new_ntree(token, WORD);
     ntree = add_ntree(ntree, new);
+    token = take_token();
   }
-  token = take_token();
-  if (!token || (strcmp(token, ";") != 0 && strcmp(token, "\n") != 0))
+  if (!token)
     return NULL;
   valid_token();
   new = new_ntree(token, LIST);

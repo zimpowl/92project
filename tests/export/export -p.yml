@@ -1,6 +1,8 @@
 42exit_code: 0
 42stderr: ''
-42stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-ZYnETvo2X7,guid=e4d5c5a3280dbedf7e894ff858376616"
+42stdout: 'export CLUTTER_IM_MODULE="xim"
+
+  export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-N8vx98ci8g,guid=2073efb86fe1e7823ff43c9d58372fde"
 
   export DEFAULTS_PATH="/usr/share/gconf/i3.default.path"
 
@@ -14,9 +16,11 @@
 
   export GTK2_MODULES="overlay-scrollbar"
 
+  export GTK_IM_MODULE="ibus"
+
   export GTK_MODULES="gail:atk-bridge"
 
-  export HOME="/home/lea"
+  export HOME="/home/zimpo"
 
   export LANG="fr_FR.UTF-8"
 
@@ -26,7 +30,7 @@
 
   export LESSOPEN="| /usr/bin/lesspipe %s"
 
-  export LOGNAME="lea"
+  export LOGNAME="zimpo"
 
   export LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:"
 
@@ -34,9 +38,9 @@
 
   export MAKELEVEL="4"
 
-  export MAKE_TERMERR="/dev/pts/1"
+  export MAKE_TERMERR="/dev/pts/2"
 
-  export MAKE_TERMOUT="/dev/pts/1"
+  export MAKE_TERMOUT="/dev/pts/2"
 
   export MANDATORY_PATH="/usr/share/gconf/i3.mandatory.path"
 
@@ -44,11 +48,15 @@
 
   export OLDPWD
 
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+  export PATH="/home/zimpo/bin:/home/zimpo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 
-  export PWD="/home/lea/Bureau/ing1/42sh/92project/tests"
+  export PWD="/home/zimpo/Documents/epita/project/92project/tests"
+
+  export QT4_IM_MODULE="xim"
 
   export QT_ACCESSIBILITY="1"
+
+  export QT_IM_MODULE="ibus"
 
   export QT_LINUX_ACCESSIBILITY_ALWAYS_ON="1"
 
@@ -58,19 +66,19 @@
 
   export SHLVL="2"
 
-  export SSH_AGENT_PID="1524"
+  export SSH_AGENT_PID="1241"
 
-  export SSH_AUTH_SOCK="/tmp/ssh-qgrIxtyr8lEr/agent.1466"
+  export SSH_AUTH_SOCK="/tmp/ssh-PCKpbTt4TLdH/agent.1183"
 
   export TERM="xterm-256color"
 
-  export USER="lea"
+  export USER="zimpo"
 
   export VTE_VERSION="4205"
 
-  export WINDOWID="20972298"
+  export WINDOWID="25166057"
 
-  export XAUTHORITY="/home/lea/.Xauthority"
+  export XAUTHORITY="/home/zimpo/.Xauthority"
 
   export XDG_CONFIG_DIRS="/etc/xdg/xdg-i3:/etc/xdg"
 
@@ -78,7 +86,7 @@
 
   export XDG_DATA_DIRS="/usr/share/i3:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop"
 
-  export XDG_GREETER_DATA_DIR="/var/lib/lightdm-data/lea"
+  export XDG_GREETER_DATA_DIR="/var/lib/lightdm-data/zimpo"
 
   export XDG_RUNTIME_DIR="/run/user/1000"
 
@@ -95,6 +103,8 @@
   export XDG_SESSION_TYPE="x11"
 
   export XDG_VTNR="7"
+
+  export XMODIFIERS="@im=ibus"
 
   export _="/usr/bin/make"
 
@@ -102,7 +112,9 @@
 exit_code: 0
 input: export -p
 stderr: ''
-stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-ZYnETvo2X7,guid=e4d5c5a3280dbedf7e894ff858376616"
+stdout: 'export CLUTTER_IM_MODULE="xim"
+
+  export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-N8vx98ci8g,guid=2073efb86fe1e7823ff43c9d58372fde"
 
   export DEFAULTS_PATH="/usr/share/gconf/i3.default.path"
 
@@ -116,9 +128,11 @@ stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-ZYnETvo2X7,gui
 
   export GTK2_MODULES="overlay-scrollbar"
 
+  export GTK_IM_MODULE="ibus"
+
   export GTK_MODULES="gail:atk-bridge"
 
-  export HOME="/home/lea"
+  export HOME="/home/zimpo"
 
   export LANG="fr_FR.UTF-8"
 
@@ -128,7 +142,7 @@ stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-ZYnETvo2X7,gui
 
   export LESSOPEN="| /usr/bin/lesspipe %s"
 
-  export LOGNAME="lea"
+  export LOGNAME="zimpo"
 
   export LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:"
 
@@ -136,9 +150,9 @@ stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-ZYnETvo2X7,gui
 
   export MAKELEVEL="4"
 
-  export MAKE_TERMERR="/dev/pts/1"
+  export MAKE_TERMERR="/dev/pts/2"
 
-  export MAKE_TERMOUT="/dev/pts/1"
+  export MAKE_TERMOUT="/dev/pts/2"
 
   export MANDATORY_PATH="/usr/share/gconf/i3.mandatory.path"
 
@@ -146,11 +160,15 @@ stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-ZYnETvo2X7,gui
 
   export OLDPWD
 
-  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+  export PATH="/home/zimpo/bin:/home/zimpo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
 
-  export PWD="/home/lea/Bureau/ing1/42sh/92project/tests"
+  export PWD="/home/zimpo/Documents/epita/project/92project/tests"
+
+  export QT4_IM_MODULE="xim"
 
   export QT_ACCESSIBILITY="1"
+
+  export QT_IM_MODULE="ibus"
 
   export QT_LINUX_ACCESSIBILITY_ALWAYS_ON="1"
 
@@ -160,19 +178,19 @@ stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-ZYnETvo2X7,gui
 
   export SHLVL="2"
 
-  export SSH_AGENT_PID="1524"
+  export SSH_AGENT_PID="1241"
 
-  export SSH_AUTH_SOCK="/tmp/ssh-qgrIxtyr8lEr/agent.1466"
+  export SSH_AUTH_SOCK="/tmp/ssh-PCKpbTt4TLdH/agent.1183"
 
   export TERM="xterm-256color"
 
-  export USER="lea"
+  export USER="zimpo"
 
   export VTE_VERSION="4205"
 
-  export WINDOWID="20972298"
+  export WINDOWID="25166057"
 
-  export XAUTHORITY="/home/lea/.Xauthority"
+  export XAUTHORITY="/home/zimpo/.Xauthority"
 
   export XDG_CONFIG_DIRS="/etc/xdg/xdg-i3:/etc/xdg"
 
@@ -180,7 +198,7 @@ stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-ZYnETvo2X7,gui
 
   export XDG_DATA_DIRS="/usr/share/i3:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop"
 
-  export XDG_GREETER_DATA_DIR="/var/lib/lightdm-data/lea"
+  export XDG_GREETER_DATA_DIR="/var/lib/lightdm-data/zimpo"
 
   export XDG_RUNTIME_DIR="/run/user/1000"
 
@@ -197,6 +215,8 @@ stdout: 'export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-ZYnETvo2X7,gui
   export XDG_SESSION_TYPE="x11"
 
   export XDG_VTNR="7"
+
+  export XMODIFIERS="@im=ibus"
 
   export _="/usr/bin/make"
 

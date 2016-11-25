@@ -30,6 +30,7 @@ struct ntree *pipeline_bis_p(struct ntree *ntree)
     valid_token();
     struct ntree *new_sep = new_ntree(token, PIPELINE);
     new_sep = add_ntree(new_sep, new);
+    skip_line();
     new = command_p();
 
     if (!new)

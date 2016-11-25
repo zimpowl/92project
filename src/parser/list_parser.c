@@ -32,17 +32,21 @@ struct ntree *compound_list_p(void)
     return NULL;
   
   char *token = take_token();
-
-  while (token && (strcmp(token, ";") == 0 
-        || strcmp(token, "&") == 0 || skip_line()))
+  while (token && (strcmp(token, ";") == 0 || strcmp(token, "&") == 0
+        || strcmp(token, "\n") == 0))
   {
+    struct ntree *new_sep = new_ntree(";", LIST);
     valid_token();
-    struct ntree *new_sep = new_ntree(token, LIST);
+
+    skip_line();
     new_sep = add_ntree(new_sep, new);
-    new_sep = add_ntree(new_sep, and_or_p());
+    new = and_or_p();
+    if (new)
+      new_sep = add_ntree(new_sep, new);
     new = new_sep;
     token = take_token();
   }
+  //skip_line();
   return new;
 }
 

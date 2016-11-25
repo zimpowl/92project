@@ -45,7 +45,51 @@
   while
 
   '
-exit_code: 1
-input: a=5; while a=6; do ls done
-stderr: "bash: -c: ligne 1: erreur de syntaxe : fin de fichier pr\xE9matur\xE9e\n"
-stdout: ''
+exit_code: 0
+input: ls
+stderr: ''
+stdout: '42sh
+
+  aide.py
+
+  ands
+
+  commands
+
+  echo
+
+  export
+
+  install.sh
+
+  multiples
+
+  ors
+
+  requirements.txt
+
+  t1.py
+
+  test8.yml
+
+  testcase
+
+  testfor
+
+  testfunction
+
+  testif
+
+  testnonvalid
+
+  testpipe
+
+  tests.py
+
+  testsuite.py
+
+  testvalid
+
+  while
+
+  '
