@@ -2,7 +2,7 @@
 42stderr: ''
 42stdout: 'export CLUTTER_IM_MODULE="xim"
 
-  export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-N8vx98ci8g,guid=2073efb86fe1e7823ff43c9d58372fde"
+  export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-vW5jlYpM5B,guid=006490a23e236f09d7ea4a7158382177"
 
   export DEFAULTS_PATH="/usr/share/gconf/i3.default.path"
 
@@ -66,9 +66,9 @@
 
   export SHLVL="2"
 
-  export SSH_AGENT_PID="1241"
+  export SSH_AGENT_PID="1235"
 
-  export SSH_AUTH_SOCK="/tmp/ssh-PCKpbTt4TLdH/agent.1183"
+  export SSH_AUTH_SOCK="/tmp/ssh-kUKikTpxxNSV/agent.1177"
 
   export TERM="xterm-256color"
 
@@ -76,7 +76,7 @@
 
   export VTE_VERSION="4205"
 
-  export WINDOWID="25166057"
+  export WINDOWID="20971675"
 
   export XAUTHORITY="/home/zimpo/.Xauthority"
 
@@ -114,7 +114,7 @@ input: export -p
 stderr: ''
 stdout: 'export CLUTTER_IM_MODULE="xim"
 
-  export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-N8vx98ci8g,guid=2073efb86fe1e7823ff43c9d58372fde"
+  export DBUS_SESSION_BUS_ADDRESS="unix:abstract=/tmp/dbus-vW5jlYpM5B,guid=006490a23e236f09d7ea4a7158382177"
 
   export DEFAULTS_PATH="/usr/share/gconf/i3.default.path"
 
@@ -178,9 +178,9 @@ stdout: 'export CLUTTER_IM_MODULE="xim"
 
   export SHLVL="2"
 
-  export SSH_AGENT_PID="1241"
+  export SSH_AGENT_PID="1235"
 
-  export SSH_AUTH_SOCK="/tmp/ssh-PCKpbTt4TLdH/agent.1183"
+  export SSH_AUTH_SOCK="/tmp/ssh-kUKikTpxxNSV/agent.1177"
 
   export TERM="xterm-256color"
 
@@ -188,7 +188,7 @@ stdout: 'export CLUTTER_IM_MODULE="xim"
 
   export VTE_VERSION="4205"
 
-  export WINDOWID="25166057"
+  export WINDOWID="20971675"
 
   export XAUTHORITY="/home/zimpo/.Xauthority"
 

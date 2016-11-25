@@ -6,9 +6,21 @@
 int read_a(struct ntree *ntree)
 {
   int res = manage_a(ntree);
+  free_ast(ntree);
   if (res == 0)
     return 0;
   return res;
+}
+
+void free_ast(struct ntree *ntree)
+{
+  if (!ntree)
+    return;
+  for (unsigned i = 0; i < ntree->size; i++)
+  {
+    free_ast(ntree->sons[0]);
+  }
+  free(ntree);
 }
 
 int manage_a(struct ntree *ntree)
